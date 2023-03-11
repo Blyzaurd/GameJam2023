@@ -1,16 +1,17 @@
 <div class="background">
   <div class="enemy">
     <div class="vie_enemy">
-      <p>PV : 100/100</p>
+      <p>PV : {{currentEnemy.currentHealth}}/{{currentEnemy.maxHealth}}</p>
     </div>
     <img src="https://img.freepik.com/vecteurs-premium/monstre-jaune_6460-403.jpg?w=2000">
+    <!-- <img src={{currentEnemy.imageUrl}}> -->
     <div class="vie_player">
-      <p>PV : {{this._globalService.player.currentHealth}}/{{this._globalService.player.maxHealth}}</p>
+      <p>PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
     </div>
   </div>
   <div class="actions">
-    <button>Attaquer</button>
-    <button (click)="defense()">Défendre</button>
+    <button (click)="attackEnemy()" [disabled]="playerTurnCheck()">Attaquer</button>
+    <button (click)="defense()" [disabled]="playerTurnCheck()">Défendre</button>
   </div>
 </div>
 

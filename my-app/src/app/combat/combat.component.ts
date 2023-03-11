@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Enemy, Player, Weapon } from 'src/assets/model';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -11,44 +10,67 @@ export class CombatComponent {
 
   constructor(public _globalService : GlobalService) {}
 
-  attackEnemy(player : Player, enemy : Enemy) {
+  currentEnemy = this._globalService.currentEnemy;
+  player = this._globalService.player;
+  selectedWeapon = this._globalService.selectedWeapon;
+  playerTurn = this._globalService.isPlayerTurn;
 
-    enemy.currentHealth -= player.damage;
+  playerTurnCheck() {
+    if(this.playerTurn == true) {
+      return false
+    } else {
+      return true
+    }
+  }
 
-    if(enemy.currentHealth <= 0) {
+  attackEnemy() {
+    if(this.playerTurn == true) {
+      this.currentEnemy.currentHealth -= this.player.damage;
+    }
+
+    if(this.currentEnemy.currentHealth <= 0) {
       this._globalService.isInCombat = false;
-      if(enemy.id == 1) {
-        this._globalService.isAxePickedUp = true;
-      }
-      if(enemy.id == 2) {
-        this._globalService.isSpearPickedUp = true;
-      }
-      if(enemy.id == 3) {
+      if(this.currentEnemy.id == 2) {
         this._globalService.isGunPickedUp = true;
       }
     }
 
-    this._globalService.isPlayerTurn = false;
+    this.playerTurn = false;
+    this.timeOutCombat();
   }
 
-  enemyAttack(player : Player, enemy : Enemy) {
-    if(this._globalService.isPlayerDefending == true) {
-      player.currentHealth -= (enemy.damage / 2)
-    } else {
-      player.currentHealth -= enemy.damage
+  timeOutCombat() {
+    if(this.playerTurn == false) {
+      setTimeout(() => {
+        this.enemyAttack();
+      }, 1500);
+    }
+  }
+
+  enemyAttack() {
+    if(this.playerTurn == false) {
+      if(this._globalService.isPlayerDefending == true) {
+        this.player.currentHealth -= (this.currentEnemy.damage / 2)
+        this._globalService.isPlayerDefending = false;
+      } else {
+        this.player.currentHealth -= this.currentEnemy.damage
+      }
     }
 
-    this._globalService.isPlayerTurn = true;
+    this.playerTurn = true;
   }
 
   defense() {
     this._globalService.isPlayerDefending = true;
 
-    this._globalService.isPlayerTurn = false;
+    this.playerTurn = false;
+    if(this.playerTurn == false) {
+      this.timeOutCombat();
+    }
   }
 
-  switchWeapon(player : Player, weapon : Weapon) {
-    player.damage = weapon.damage
+  switchWeapon() {
+    this.player.damage = this.selectedWeapon.damage
   }
 
   leaveCombat() {
