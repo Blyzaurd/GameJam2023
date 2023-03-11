@@ -8,6 +8,7 @@ import { Map00Component } from './map00/map00.component';
 import { Map01Component } from './map01/map01.component';
 import { Map10Component } from './map10/map10.component';
 import { Map11Component } from './map11/map11.component';
+import { CombatComponent } from './combat/combat.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Map11Component } from './map11/map11.component';
     Map00Component,
     Map01Component,
     Map10Component,
-    Map11Component
+    Map11Component,
+    CombatComponent
   ],
   imports: [
     BrowserModule,
