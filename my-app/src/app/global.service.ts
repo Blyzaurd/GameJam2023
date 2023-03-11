@@ -46,6 +46,11 @@ export class GlobalService {
 
 
 
+    // Great Beast
+
+    greatBeastCurrentHealth = 100;
+    greatBeastMaxtHealth = 100;
+    greatBeastDamage = 100;
 
 
 }
