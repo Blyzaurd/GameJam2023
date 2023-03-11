@@ -11,26 +11,23 @@ export class MenuComponent implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audioIntro = new Audio();
-  audioIntroLoop = new Audio();
+  audioClick = new Audio();
 
   ngOnInit(): void {
     this.audioIntro.src = "../assets/Ouverture-Intro_90bpm_4-4_L25m_P0b.wav";
-    this.audioIntroLoop.src = "../assets/Ouverture-Loop_90bpm_4-4_L25m_P0b.wav";
-    this.audioIntroLoop.load();
+    this.audioClick.src = "../assets/SFX_Click-Menu.wav";
     this.audioIntro.load();
+    this.audioClick.load();
     this.audioIntro.play();
-
-    if(this.audioIntro.ended){
-      this.audioIntroLoop.play();
-    }
   }
 
   goToMap20() {
+    this.audioClick.play();
+
     this.globalService.player.positionX = 2;
     this.globalService.player.positionY = 0;
 
     this.audioIntro.pause();
-    this.audioIntroLoop.pause();
   }
 
 }
