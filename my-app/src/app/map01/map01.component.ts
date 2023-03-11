@@ -11,11 +11,11 @@ export class Map01Component {
   constructor(private globalService: GlobalService){}
 
   goToMap11() {
-    this.globalService.myX = 1;
-    this.globalService.myY = 1;
+    this.globalService.player.positionX = 1;
+    this.globalService.player.positionY = 1;
   }
   goToMap00() {
-    this.globalService.myX = 0;
-    this.globalService.myY = 0;
+    this.globalService.player.positionX = 0;
+    this.globalService.player.positionY = 0;
   }
 }

@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Enemy } from 'src/assets/model';
+import { Player } from 'src/assets/model';
 
 @Injectable({
 
@@ -9,48 +11,64 @@ export class GlobalService {
     constructor() {}
 
     //My Character
-    myX = 100;
-    myY = 100;
-
-    myCurrentHealth = 100;
-    myMaxHealth = 100;
-
-    enemyCurrentHealth = 100;
-    enemyMAxHealth = 100;
-
-    myDamage = 50;
 
     isGunPickedUp = false;
-    isTorchPickedUp = false;
+    isTorchPckedUp = false;
     isAxePickedUp = false;
     isSpearPickedUp = false;
 
 
     //Hunter
 
-    hunter1CurrentHealth = 100;
-    hunter1MaxHealth = 100;
-    hunter1Damage = 50;
+    hunter1 : Enemy = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 10
+    }
 
-    hunter2CurrentHealth = 100;
-    hunter2MaxHealth = 100;
-    hunter2Damage = 50;
+    hunter2 : Enemy = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 10
+    }
 
-    hunter3CurrentHealth = 100;
-    hunter3MaxHealth = 100;
-    hunter3Damage = 50;
+    hunter3 : Enemy = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 10
+    }
 
-    hunter4CurrentHealth = 100;
-    hunter4MaxHealth = 100;
-    hunter4Damage = 50;
+    hunter4 : Enemy = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 10
+    }
 
-
-
+    player : Player = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 10,
+        positionX : 100,
+        positionY : 100
+    }
     // Great Beast
+    
+    greatBeast : Enemy = {
+        currentHealth : 100,
+        maxHealth : 100,
+        damage : 100
+    }
 
     greatBeastCurrentHealth = 100;
     greatBeastMaxtHealth = 100;
     greatBeastDamage = 100;
 
 
+    /// Battle
+    isInCombat: boolean = false;
+    isPlayerTurn: boolean = true;
+
+    // startBattle(player. enemy) {
+
+    // }
 }
