@@ -9,7 +9,7 @@ import { Player } from 'src/assets/model';
 export class GlobalService {
 
     constructor() {}
-    
+
     isGunPickedUp = false;
     isTorchPckedUp = false;
     isAxePickedUp = false;
@@ -46,8 +46,8 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        positionX : 100,
-        positionY : 100
+        positionX : 200,
+        positionY : 200
     }
 
     //Weapons

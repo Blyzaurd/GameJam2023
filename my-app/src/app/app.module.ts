@@ -12,6 +12,7 @@ import { CombatComponent } from './combat/combat.component';
 import { Map20Component } from './map20/map20.component';
 import { Map21Component } from './map21/map21.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     Map11Component,
     CombatComponent,
     Map20Component,
-    Map21Component
+    Map21Component,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,
