@@ -8,8 +8,8 @@ div {
 }
 .btn {
   position: absolute;
-  top: 130%;
-  left: 51%;
+  top: 70vh;
+  left: 37vh;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   /* background-color: blue; */
@@ -49,8 +49,8 @@ h1 {
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   color: white;
-  margin-top: 10%;
-  margin-left: 28%;
+  margin-top: 10vh;
+  margin-left: 50vh;
 }
 @keyframes scale {
   100% {
