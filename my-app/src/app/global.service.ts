@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Enemy } from 'src/assets/model';
+import { Enemy, Weapon } from 'src/assets/model';
 import { Player } from 'src/assets/model';
 
 @Injectable({
@@ -9,16 +9,13 @@ import { Player } from 'src/assets/model';
 export class GlobalService {
 
     constructor() {}
-
-    //My Character
-
+    
     isGunPickedUp = false;
     isTorchPckedUp = false;
     isAxePickedUp = false;
     isSpearPickedUp = false;
 
-
-    //Hunter
+    //Hunters
 
     hunter1 : Enemy = {
         currentHealth : 100,
@@ -44,6 +41,7 @@ export class GlobalService {
         damage : 10
     }
 
+    //Player
     player : Player = {
         currentHealth : 100,
         maxHealth : 100,
@@ -51,24 +49,28 @@ export class GlobalService {
         positionX : 100,
         positionY : 100
     }
+
+    //Weapons
+    axe : Weapon = {
+        damage : 10
+    }
+
+    spear : Weapon = {
+        damage : 20
+    }
+
+    gun : Weapon = {
+        damage : 30
+    }
+
     // Great Beast
-    
     greatBeast : Enemy = {
         currentHealth : 100,
         maxHealth : 100,
         damage : 100
     }
 
-    greatBeastCurrentHealth = 100;
-    greatBeastMaxtHealth = 100;
-    greatBeastDamage = 100;
-
-
     /// Battle
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;
-
-    // startBattle(player. enemy) {
-
-    // }
 }

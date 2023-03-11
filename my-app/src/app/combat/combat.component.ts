@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Enemy, Player, Weapon } from 'src/assets/model';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -8,25 +9,26 @@ import { GlobalService } from '../global.service';
 })
 export class CombatComponent {
 
-  // attackEnemy(player, enemy) {
+  constructor(private _globalService : GlobalService) {}
 
-  //   enemy.enemyCurrentHealth -= player.myDamage;
+  attackEnemy(player : Player, enemy : Enemy) {
 
-  //   if(enemy.enemyCurrentHealth <= 0) {
-  //     //endbattle
-  //   }
-  // }
+    enemy.currentHealth -= player.damage;
 
-  // enemyAttack(player, enemy) {
+    if(enemy.currentHealth <= 0) {
+      //endbattle
+    }
+  }
 
-  // }
+  enemyAttack(player : Player, enemy : Enemy) {
 
-  // defense() {
+  }
 
-  // }
+  defense() {
 
-  // switchWeapon(player, weaponType) {
+  }
 
-  // }
+  switchWeapon(player : Player, weapon : Weapon) {
+  }
 
 }

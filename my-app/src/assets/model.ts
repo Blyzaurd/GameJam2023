@@ -11,3 +11,7 @@ export interface Player {
     positionX : number
     positionY : number
 }
+
+export interface Weapon {
+    damage : number
+}
