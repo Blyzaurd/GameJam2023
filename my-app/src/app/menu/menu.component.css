@@ -1,7 +1,7 @@
 div {
   width: 100%;
   height: 98vh;
-  background-image: url('https://pimmedia.egger.com/l/decor/U732_PM/s/Detail/f/881x513/8812252397598');
+  background-image: url('/my-app/src/assets/startmenu.png');
   background-size: 100% 100%;
   border: 1px solid red;
 }
