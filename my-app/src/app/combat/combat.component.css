@@ -3,6 +3,8 @@
     height: 98vh;
     background-image: url('/assets/noir_combat2.jpeg');
     background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .vie_enemy {
@@ -24,6 +26,10 @@
   .enemy {
     height: 66%;
     border: 4px solid white;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
   }
   .enemy img {
     max-width: 120vh;
