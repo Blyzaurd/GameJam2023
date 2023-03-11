@@ -6,6 +6,6 @@
 <app-map10 *ngIf="this.globalService.player.positionX === 1 && this.globalService.player.positionY === 0 && this.globalService.isInCombat === false " @FadeIn @FadeOut></app-map10>
 <app-map11 *ngIf="this.globalService.player.positionX === 1 && this.globalService.player.positionY === 1 && this.globalService.isInCombat === false " @FadeIn @FadeOut></app-map11>
 <app-map20 *ngIf="this.globalService.player.positionX === 2 && this.globalService.player.positionY === 0 && this.globalService.isInCombat === false " @FadeIn @FadeOut ></app-map20>
-<app-map21 *ngIf="this.globalService.player.positionX === 2 && this.globalService.player.positionY === 1 && this.globalService.isInCombat" @FadeIn @FadeOut></app-map21>
+<app-map21 *ngIf="this.globalService.player.positionX === 2 && this.globalService.player.positionY === 1 && this.globalService.isInCombat === false " @FadeIn @FadeOut></app-map21>
 
 <app-combat *ngIf="this.globalService.isInCombat === true"  @FadeIn @FadeOut> </app-combat>
