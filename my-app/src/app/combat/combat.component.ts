@@ -76,4 +76,7 @@ export class CombatComponent {
   leaveCombat() {
     this._globalService.isInCombat = false;
   }
+
+
+  
 }
