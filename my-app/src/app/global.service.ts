@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-    
+
     providedIn: 'root'
 })
 export class GlobalService {
@@ -9,8 +9,8 @@ export class GlobalService {
     constructor() {}
 
     //My Character
-    myX = 0;
-    myY = 0;
+    myX = 100;
+    myY = 100;
 
     myCurrentHealth = 100;
     myMaxHealth = 100;
