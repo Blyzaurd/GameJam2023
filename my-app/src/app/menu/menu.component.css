@@ -1,4 +1,10 @@
-.button-menu {
-  margin-left: 50%;
+.button-start {
+  margin-left: 45%;
   margin-top: 25%;
+}
+
+.button-style {
+  font-size: 30px;
+  color: blue;
+  padding: 50px;
 }
