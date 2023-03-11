@@ -11,6 +11,7 @@ import { Map11Component } from './map11/map11.component';
 import { CombatComponent } from './combat/combat.component';
 import { Map20Component } from './map20/map20.component';
 import { Map21Component } from './map21/map21.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { Map21Component } from './map21/map21.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
