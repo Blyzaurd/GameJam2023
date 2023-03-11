@@ -1,3 +1,4 @@
+
 div {
   width: 100%;
   height: 98vh;
@@ -5,32 +6,77 @@ div {
   background-size: 100% 100%;
   border: 1px solid red;
 }
-.container .btn {
+.btn {
   position: absolute;
-  top: 75%;
+  top: 130%;
   left: 51%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   /* background-color: blue; */
-  color: white;
-  font-size: 30px;
+  background-color: red;
+  font-size: 10px;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  text-align: center;
-
-  background-color: gray;
-    background-repeat: no-repeat;
-
-
-    overflow: hidden;
-    outline: none;
+  font-size: 25px;
 }
-.textInit {
-  position: absolute;
-  top: 35%;
-  left: 46%;
+
+h2 {
+
+  color: red;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Montserrat Medium";
+  max-width: 40ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   color: white;
+  margin-top: 10%;
+  margin-left: 28%;
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
   font-size: 45px;
+}
+
+span:nth-child(1) {
+  animation: fade-in 2s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+  animation: fade-in 3s 5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
