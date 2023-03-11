@@ -1,4 +1,6 @@
 export interface Enemy {
+    id : number
+    name : string
     currentHealth : number
     maxHealth : number
     damage : number

@@ -16,26 +16,33 @@ export class GlobalService {
     isSpearPickedUp = false;
 
     //Hunters
-
     hunter1 : Enemy = {
+        id : 1,
+        name : 'Jambon',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10
     }
 
     hunter2 : Enemy = {
+        id : 2,
+        name : 'Jambon',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10
     }
 
     hunter3 : Enemy = {
+        id : 3,
+        name : 'Jambon',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10
     }
 
     hunter4 : Enemy = {
+        id : 4,
+        name : 'Jambon',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10
@@ -65,6 +72,8 @@ export class GlobalService {
 
     // Great Beast
     greatBeast : Enemy = {
+        id : 5,
+        name : 'Jambon',
         currentHealth : 100,
         maxHealth : 100,
         damage : 100
@@ -73,4 +82,5 @@ export class GlobalService {
     /// Battle
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;
+    isPlayerDefending: boolean = false;
 }
