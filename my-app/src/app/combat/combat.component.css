@@ -1,0 +1,13 @@
+div {
+    width: 100%;
+    height: 800px;
+    background-image: url('https://images.pexels.com/videos/3045163/free-video-3045163.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: 100% 100%;
+    border: 1px solid red;
+  }
+
+  h1 { 
+    color : white;
+
+  }
+  
