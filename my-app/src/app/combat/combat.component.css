@@ -8,6 +8,16 @@ div {
 
   h1 { 
     color : white;
-
   }
   
+
+  hr {
+  align-items: center;
+  width: 80%;
+  height: 60px;
+  background-color: black;
+  margin: 20px auto;
+
+  }
+
+
