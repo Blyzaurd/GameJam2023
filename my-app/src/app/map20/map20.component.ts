@@ -11,10 +11,10 @@ export class Map20Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   ngOnInit(): void {
-    let audioIntro = new Audio();
-    audioIntro.src = "../assets/Ouverture-Intro_90bpm_4-4_L25m_P0b.wav";
-    audioIntro.load();
-    audioIntro.play();
+    // let audioIntro = new Audio();
+    // audioIntro.src = "../assets/Ouverture-Intro_90bpm_4-4_L25m_P0b.wav";
+    // audioIntro.load();
+    // audioIntro.play();
   }
 
   goToMap10() {
