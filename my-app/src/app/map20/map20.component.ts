@@ -20,4 +20,8 @@ export class Map20Component {
     this.globalService.player.positionY = 1;
   }
 
+  goToFight(){
+    this.globalService.isInCombat = true;
+  }
+
 }
