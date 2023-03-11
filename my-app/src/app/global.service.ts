@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Enemy, Weapon } from 'src/assets/model';
+import { Enemy, Weapon,  } from 'src/assets/model';
 import { Player } from 'src/assets/model';
 
 @Injectable({
@@ -23,7 +23,8 @@ export class GlobalService {
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
-        imageUrl : '/assets/Chasseurcombat.png'
+        imageUrl : '/assets/Chasseurcombat.png',
+       
     }
 
     hunter2 : Enemy = {
@@ -69,4 +70,9 @@ export class GlobalService {
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;
     isPlayerDefending: boolean = false;
+
+    superAttack: boolean = true;
+    deathTraitor: boolean = true;
+    deathFriendly: boolean = true;
+
 }

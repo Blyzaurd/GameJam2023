@@ -49,28 +49,44 @@
   .actions {
     height: 35%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     align-self: baseline;
   }
 
   button {
-    font-size: 45px;
+    font-size: 35px;
     margin-top: 5%;
     margin-left: 15px;
     background-color: transparent;
     display: block;
     color: white;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     cursor: pointer;
+  }
+
+  .button-action{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: baseline;
+
   }
 
   img .shake {
     visibility: hidden;
   }
 
+ .dialogue{
+  background-color: white;
+  align-self: flex-end;
+  border: 4px solid white;
+  margin-bottom: 40px;
+  font-size: 20px;
+  
+ }
 
 
 

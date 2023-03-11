@@ -5,6 +5,7 @@ export interface Enemy {
     maxHealth : number
     damage : number
     imageUrl: string
+    
 }
 
 export interface Player {
@@ -18,3 +19,4 @@ export interface Player {
 export interface Weapon {
     damage : number
 }
+
