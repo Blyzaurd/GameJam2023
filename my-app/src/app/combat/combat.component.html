@@ -1,11 +1,20 @@
-<div>
-
-    <h1>  <button class="fight" (click)="leaveCombat()">Leave</button> </h1>
-
-    <h1>ALLO</h1>
-<hr>
-
+<div class="background">
+  <div class="enemy">
+    <div class="vie_enemy">
+      <p>PV : 100/100</p>
+    </div>
+    <img src="https://img.freepik.com/vecteurs-premium/monstre-jaune_6460-403.jpg?w=2000">
+    <div class="vie_player">
+      <p>PV : {{this._globalService.player.currentHealth}}/{{this._globalService.player.maxHealth}}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button>Attaquer</button>
+    <button (click)="defense()">Défendre</button>
+  </div>
 </div>
+
+
 
 
 

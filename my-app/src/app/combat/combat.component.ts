@@ -9,7 +9,7 @@ import { GlobalService } from '../global.service';
 })
 export class CombatComponent {
 
-  constructor(private _globalService : GlobalService) {}
+  constructor(public _globalService : GlobalService) {}
 
   attackEnemy(player : Player, enemy : Enemy) {
 

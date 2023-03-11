@@ -1,23 +1,66 @@
-div {
+.background {
     width: 100%;
     height: 98vh;
-    background-image: url('https://images.pexels.com/videos/3045163/free-video-3045163.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-image: url('/assets/noir_combat2.jpeg');
     background-size: 100% 100%;
-    border: 1px solid red;
   }
 
-  h1 { 
+  .vie_enemy {
+    font-size: 40px;
+    margin-left: 82%;
+    margin-top: -10px;
+    padding-left: 20px;
+    padding-bottom: -55px;
+    color: white;
+  }
+
+  .vie_player {
+    font-size: 40px;
+    margin-left: 5%;
+    margin-top: -7%;
+    color: white;
+  }
+
+  .enemy {
+    height: 66%;
+    border: 4px solid white;
+  }
+  .enemy img {
+    width: 400px;
+    height: 400px;
+    margin-top: 1%;
+    margin-left: 60%;
+  }
+
+  .actions {
+    height: 35%;
+  }
+
+  button {
+    font-size: 45px;
+    margin-top: 5%;
+    margin-left: 15px;
+    background-color: transparent;
+    display: block;
+    color: white;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  /* h1 {
     color : white;
-  }
-  
+  } */
 
-  hr {
+
+  /* hr {
   align-items: center;
   width: 80%;
   height: 60px;
   background-color: black;
   margin: 20px auto;
 
-  }
+  } */
+
+
 
 
