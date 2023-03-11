@@ -27,4 +27,8 @@ export class Map20Component implements OnInit {
     this.globalService.player.positionY = 1;
   }
 
+  goToFight(){
+    this.globalService.isInCombat = true;
+  }
+
 }

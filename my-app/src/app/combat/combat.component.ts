@@ -31,4 +31,8 @@ export class CombatComponent {
   switchWeapon(player : Player, weapon : Weapon) {
   }
 
+  leaveCombat() {
+    this._globalService.isInCombat = false;
+  }
+
 }
