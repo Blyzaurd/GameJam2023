@@ -7,8 +7,10 @@ div {
 }
 
 .container .btn {
+  width: 100vh;
+  height: 30vh;
   position: absolute;
-  top: 45%;
+  top: 75%;
   left: 51%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
