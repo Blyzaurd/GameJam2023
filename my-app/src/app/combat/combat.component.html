@@ -3,9 +3,11 @@
     <div class="vie_enemy">
       <p>PV : {{currentEnemy.currentHealth}}/{{currentEnemy.maxHealth}}</p>
     </div>
-    <img src={{currentEnemy.imageUrl}}>
+    <img src={{currentEnemy.imageUrl}} *ngIf="playerAttacking === false">
+    <img src="https://media.istockphoto.com/id/519845857/vector/blood-drop-with-thumbs-up.jpg?s=612x612&w=0&k=20&c=Eg_mmTAE9cSZbAih-8sdNuCEbCnzsmPJRcKCq0UAX-A=" *ngIf="playerAttacking === true">
     <div class="vie_player">
-      <p>PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
+      <p class="sans-rouge" *ngIf="enemyAttacking === false">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
+      <p class="rouge" *ngIf="enemyAttacking === true">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
     </div>
   </div>
   <div class="actions">
