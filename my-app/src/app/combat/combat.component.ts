@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -26,7 +26,6 @@ export class CombatComponent {
   }
 
   attackEnemy() {
-    this.enemyAttacking = false;
     if(this.playerTurn == true) {
       this.currentEnemy.currentHealth -= this.player.damage;
     }
@@ -37,33 +36,20 @@ export class CombatComponent {
         this._globalService.isGunPickedUp = true;
       }
     }
-    this.playerAttacking = true;
 
     this.playerTurn = false;
-    this.timeoutDegat();
     this.timeOutCombat();
-  }
-
-  timeoutDegat() {
-    setTimeout(() => {
-      this.changeAttack();
-    }, 250);
-  }
-
-  changeAttack() {
-    this.playerAttacking === false;
   }
 
   timeOutCombat() {
     if(this.playerTurn == false) {
       setTimeout(() => {
         this.enemyAttack();
-      }, 750);
+      }, 1500);
     }
   }
 
   enemyAttack() {
-    this.playerAttacking = false;
     if(this.playerTurn == false) {
       if(this._globalService.isPlayerDefending == true) {
         this.player.currentHealth -= (this.currentEnemy.damage / 2)
@@ -72,19 +58,11 @@ export class CombatComponent {
         this.player.currentHealth -= this.currentEnemy.damage
       }
     }
-    this.enemyAttacking = true;
-    this.playerTurn = true;
-    setTimeout(() => {
-      this.changeEnemyAttack();
-    }, 500);
-  }
 
-  changeEnemyAttack() {
-    this.enemyAttacking === false;
+    this.playerTurn = true;
   }
 
   defense() {
-    this.enemyAttacking = false;
     this._globalService.isPlayerDefending = true;
 
     this.playerTurn = false;
@@ -100,7 +78,4 @@ export class CombatComponent {
   leaveCombat() {
     this._globalService.isInCombat = false;
   }
-
-
-  
 }
