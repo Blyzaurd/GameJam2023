@@ -22,6 +22,11 @@ export class Map20Component implements OnInit {
     this.globalService.player.positionY = 0;
   }
 
+  goToMap30() {
+    this.globalService.player.positionX = 3;
+    this.globalService.player.positionY = 0;
+  }
+
   goToMap21() {
     this.globalService.player.positionX = 2;
     this.globalService.player.positionY = 1;

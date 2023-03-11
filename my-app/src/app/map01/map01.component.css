@@ -59,7 +59,7 @@ div {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   /* background-color: blue; */
-  color: transparent;
+  color: black;
   font-size: 30px;
   padding: 12px 24px;
   border: none;

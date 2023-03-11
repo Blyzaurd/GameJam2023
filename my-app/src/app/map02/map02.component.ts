@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-map02',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class Map02Component {
 
+  constructor(private globalService: GlobalService){}
+
+  goToMap01() {
+    this.globalService.player.positionX = 0;
+    this.globalService.player.positionY = 1;
+  }
+  goToMap03() {
+    this.globalService.player.positionX = 0;
+    this.globalService.player.positionY = 3;
+  }
+  goToMap12() {
+    this.globalService.player.positionX = 1;
+    this.globalService.player.positionY = 2;
+  }
 }

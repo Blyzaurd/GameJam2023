@@ -14,6 +14,10 @@ import { Map21Component } from './map21/map21.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AccueilComponent } from './accueil/accueil.component';
 import { Map02Component } from './map02/map02.component';
+import { Map44Component } from './map44/map44.component';
+import { Map43Component } from './map43/map43.component';
+import { Map42Component } from './map42/map42.component';
+import { Map41Component } from './map41/map41.component';
 import { Map03Component } from './map03/map03.component';
 import { Map04Component } from './map04/map04.component';
 import { Map12Component } from './map12/map12.component';
@@ -28,10 +32,6 @@ import { Map32Component } from './map32/map32.component';
 import { Map33Component } from './map33/map33.component';
 import { Map34Component } from './map34/map34.component';
 import { Map40Component } from './map40/map40.component';
-import { Map41Component } from './map41/map41.component';
-import { Map42Component } from './map42/map42.component';
-import { Map43Component } from './map43/map43.component';
-import { Map44Component } from './map44/map44.component';
 
 @NgModule({
   declarations: [
@@ -39,18 +39,16 @@ import { Map44Component } from './map44/map44.component';
     MenuComponent,
     Map00Component,
     Map01Component,
-    Map10Component,
-    Map11Component,
-    CombatComponent,
-    Map20Component,
-    Map21Component,
-    AccueilComponent,
     Map02Component,
     Map03Component,
     Map04Component,
+    Map10Component,
+    Map11Component,
     Map12Component,
     Map13Component,
     Map14Component,
+    Map20Component,
+    Map21Component,
     Map22Component,
     Map23Component,
     Map24Component,
@@ -63,7 +61,9 @@ import { Map44Component } from './map44/map44.component';
     Map41Component,
     Map42Component,
     Map43Component,
-    Map44Component
+    Map44Component,
+    AccueilComponent,
+    CombatComponent
   ],
   imports: [
     BrowserModule,
