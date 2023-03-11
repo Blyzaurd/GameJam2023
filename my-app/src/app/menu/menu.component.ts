@@ -10,8 +10,8 @@ export class MenuComponent {
 
   constructor(private globalService: GlobalService){}
 
-  goToMap00() {
-    this.globalService.myX = 0;
+  goToMap20() {
+    this.globalService.myX = 2;
     this.globalService.myY = 0;
   }
 

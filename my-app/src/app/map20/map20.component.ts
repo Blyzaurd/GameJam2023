@@ -2,22 +2,22 @@ import { Component } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
-  selector: 'app-map00',
-  templateUrl: './map00.component.html',
-  styleUrls: ['./map00.component.css']
+  selector: 'app-map20',
+  templateUrl: './map20.component.html',
+  styleUrls: ['./map20.component.css']
 })
-export class Map00Component {
+export class Map20Component {
 
   constructor(private globalService: GlobalService){}
 
-  goToMap01() {
+  goToMap10() {
     this.globalService.myX = 0;
     this.globalService.myY = 1;
   }
 
-  goToMap10() {
-    this.globalService.myX = 1;
-    this.globalService.myY = 0;
+  goToMap21() {
+    this.globalService.myX = 2;
+    this.globalService.myY = 1;
   }
 
 }
