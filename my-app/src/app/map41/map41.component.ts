@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -6,8 +6,16 @@ import { GlobalService } from '../global.service';
   templateUrl: './map41.component.html',
   styleUrls: ['./map41.component.css']
 })
-export class Map41Component {
+export class Map41Component implements OnInit {
   constructor(private globalService: GlobalService){}
+
+  audio41 = new Audio();
+
+  ngOnInit(): void {
+    this.audio00.src = "../assets/Music-Exploration1.wav";
+    this.audio00.load();
+    this.audio00.play();
+  }
 
   goToMap42() {
     this.globalService.player.positionX = 4;
@@ -19,5 +27,5 @@ export class Map41Component {
     this.globalService.player.positionY = 0;
   }
 
- 
+
 }
