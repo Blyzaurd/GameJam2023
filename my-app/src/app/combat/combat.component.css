@@ -26,10 +26,10 @@
     border: 4px solid white;
   }
   .enemy img {
-    width: 400px;
-    height: 400px;
-    margin-top: 1%;
-    margin-left: 60%;
+    max-width: 1000px;
+    max-height: 1000px;
+    margin-top: -3%;
+    margin-left: 50%;
   }
 
   .actions {

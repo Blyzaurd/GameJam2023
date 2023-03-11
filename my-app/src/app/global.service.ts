@@ -23,7 +23,7 @@ export class GlobalService {
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
-        imageUrl : ''
+        imageUrl : '/assets/Chasseurcombat.png'
     }
 
     hunter2 : Enemy = {
