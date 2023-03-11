@@ -7,15 +7,22 @@ const enterTransition = transition(':enter', [
 style({
   opacity: 0
  }),
- animate('2s ease-in' , style({opacity: 1})),
+ animate('1s ease-in' , style({opacity: 1})),
 ])
+const exitTransition = transition(':leave', [
+  style({
+    opacity: 1
+   }),
+   animate('500ms ease-out' , style({opacity: 0})),
+  ])
 const FadeIn = trigger('FadeIn', [enterTransition]);
+const FadeOut = trigger('FadeOut', [exitTransition]);
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [FadeIn]
+  animations: [FadeIn, FadeOut]
 })
 export class AppComponent {
   title = 'my-app';
