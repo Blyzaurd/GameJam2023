@@ -40,6 +40,11 @@
 
   .actions {
     height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-self: baseline;
   }
 
   button {
