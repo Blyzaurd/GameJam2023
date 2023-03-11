@@ -8,12 +8,12 @@ div {
 
 .gauche {
   position: absolute;
-  top: 80%;
-  left: 11%;
+  top: 40%;
+  left: 8%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   /* background-color: blue; */
-  color: black;
+  color: transparent;
   font-size: 30px;
   padding: 12px 24px;
   border: none;
@@ -31,12 +31,12 @@ div {
 
 .droite {
   position: absolute;
-  top: 80%;
-  left: 85%;
+  top: 35%;
+  left: 92%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   /* background-color: blue; */
-  color: black;
+  color: transparent;
   font-size: 30px;
   padding: 12px 24px;
   border: none;
@@ -52,24 +52,22 @@ div {
     outline: none;
 }
 .droit {
-  position: absolute;
-  top: 20%;
-  left: 51%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  /* background-color: blue; */
-  color: black;
-  font-size: 30px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-
-  background-color: transparent;
+  height: 140px;
+    width: 80px;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 30px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color: transparent;
     background-repeat: no-repeat;
-
-
     overflow: hidden;
     outline: none;
 }
