@@ -1,8 +1,8 @@
-<app-menu *ngIf="this.globalService.myX === 100 && this.globalService.myY === 100"></app-menu>
+<app-menu *ngIf="this.globalService.player.positionX === 100 && this.globalService.player.positionY === 100"></app-menu>
 
-<app-map00 *ngIf="this.globalService.myX === 0 && this.globalService.myY === 0" @FadeIn></app-map00>
-<app-map01 *ngIf="this.globalService.myX === 0 && this.globalService.myY === 1" @FadeIn></app-map01>
-<app-map10 *ngIf="this.globalService.myX === 1 && this.globalService.myY === 0" @FadeIn></app-map10>
-<app-map11 *ngIf="this.globalService.myX === 1 && this.globalService.myY === 1" @FadeIn></app-map11>
-<app-map20 *ngIf="this.globalService.myX === 2 && this.globalService.myY === 0" @FadeIn></app-map20>
-<app-map21 *ngIf="this.globalService.myX === 2 && this.globalService.myY === 1" @FadeIn></app-map21>
+<app-map00 *ngIf="this.globalService.player.positionX === 0 && this.globalService.player.positionY === 0" @FadeIn></app-map00>
+<app-map01 *ngIf="this.globalService.player.positionX === 0 && this.globalService.player.positionY === 1" @FadeIn></app-map01>
+<app-map10 *ngIf="this.globalService.player.positionX === 1 && this.globalService.player.positionY === 0" @FadeIn></app-map10>
+<app-map11 *ngIf="this.globalService.player.positionX === 1 && this.globalService.player.positionY === 1" @FadeIn></app-map11>
+<app-map20 *ngIf="this.globalService.player.positionX === 2 && this.globalService.player.positionY === 0" @FadeIn></app-map20>
+<app-map21 *ngIf="this.globalService.player.positionX === 2 && this.globalService.player.positionY === 1" @FadeIn></app-map21>

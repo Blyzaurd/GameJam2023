@@ -11,8 +11,8 @@ export class MenuComponent {
   constructor(private globalService: GlobalService){}
 
   goToMap20() {
-    this.globalService.myX = 2;
-    this.globalService.myY = 0;
+    this.globalService.player.positionX = 2;
+    this.globalService.player.positionY = 0;
   }
 
 }
