@@ -8,7 +8,7 @@ import { GlobalService } from '../global.service';
 })
 export class Map20Component implements OnInit {
 
-  constructor(private globalService: GlobalService){}
+  constructor(public globalService: GlobalService){}
 
   audio20 = new Audio();
   audioPapier = new Audio();
