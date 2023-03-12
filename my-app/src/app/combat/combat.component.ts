@@ -86,7 +86,10 @@ export class CombatComponent implements OnInit {
 
     this.playerTurn = false;
     this.timeoutDegat();
-    this.timeOutCombat();
+    if (this._globalService.currentEnemy.currentHealth > 0)
+    {
+      this.timeOutCombat();
+    }
   }
 
   timeoutDegat() {
