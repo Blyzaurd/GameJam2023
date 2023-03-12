@@ -43,7 +43,8 @@ export class GlobalService {
         maxHealth : 100,
         damage : 10,
         positionX : 300,
-        positionY : 300
+        positionY : 300,
+        mort : false
     }
 
     //Weapons

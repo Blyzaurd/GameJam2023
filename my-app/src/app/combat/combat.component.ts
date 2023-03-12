@@ -59,6 +59,15 @@ export class CombatComponent {
       }
     }
 
+    if(this.player.currentHealth <= 0) {
+      this.player.mort = true;
+      this._globalService.isInCombat = false;
+    }
+    if(this.player.mort === true) {
+      this.player.positionX = 500;
+      this.player.positionY = 500;
+    }
+
     this.playerTurn = true;
   }
 

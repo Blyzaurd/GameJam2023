@@ -34,6 +34,7 @@ import { Map34Component } from './map34/map34.component';
 import { Map40Component } from './map40/map40.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { IntroComponent } from './intro/intro.component';
+import { GameoverComponent } from './gameover/gameover.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { IntroComponent } from './intro/intro.component';
     AccueilComponent,
     CombatComponent,
     DialogComponent,
-    IntroComponent
+    IntroComponent,
+    GameoverComponent
   ],
   imports: [
     BrowserModule,

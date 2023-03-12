@@ -14,6 +14,7 @@ export interface Player {
     damage : number
     positionX : number
     positionY : number
+    mort: boolean
 }
 
 export interface Weapon {
