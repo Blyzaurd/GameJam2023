@@ -4,8 +4,8 @@ export interface Enemy {
     currentHealth : number
     maxHealth : number
     damage : number
-    imageUrl: string
-    
+    combatImageUrl : string
+    dialogImageUrl : string
 }
 
 export interface Player {

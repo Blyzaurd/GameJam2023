@@ -36,9 +36,12 @@ export class Map20Component implements OnInit {
     this.audio20.pause();
   }
 
-  goToFight(){
+  goToFight() {
     this.globalService.isInCombat = true;
     this.audio20.pause();
   }
 
+  goToDialog() {
+    this.globalService.isInDialog = true;
+  }
 }
