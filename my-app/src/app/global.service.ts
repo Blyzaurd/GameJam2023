@@ -23,8 +23,8 @@ export class GlobalService {
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
-        imageUrl : '/assets/Chasseurcombat.png',
-       
+        combatImageUrl : '/assets/Chasseurcombat.png',
+        dialogImageUrl : ''
     }
 
     hunter2 : Enemy = {
@@ -33,7 +33,8 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        imageUrl : ''
+        combatImageUrl : '/assets/Chasseurcombat.png',
+        dialogImageUrl : ''
     }
 
     //Player
@@ -61,8 +62,11 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 100,
-        imageUrl : ''
+        combatImageUrl : '',
+        dialogImageUrl : ''
     }
+
+    isInDialog : boolean = false;
 
     /// Battle
     currentEnemy : Enemy = this.hunter1;
@@ -76,4 +80,9 @@ export class GlobalService {
     deathFriendly: boolean = false;
 
 
+    //Dialog
+    isWantedPageRead : boolean = false;
+    isSisterPageRead : boolean = false;
+    isTraitorHelping : boolean = false;
+    isFriendlyHelping : boolean = false;
 }
