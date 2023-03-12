@@ -68,7 +68,7 @@ export class GlobalService {
     // Great Beast
     greatBeast : Enemy = {
         id : 3,
-        name : 'Jambon',
+        name : 'Great Beast of HamShire',
         currentHealth : 100,
         maxHealth : 100,
         damage : 100,
@@ -78,7 +78,30 @@ export class GlobalService {
     }
 
 
-    // 
+    // Minion21
+    minion21 : Enemy = {
+        id : 4,
+        name : 'Minion21',
+        currentHealth : 50,
+        maxHealth : 50,
+        damage : 10,
+        combatImageUrl : '/assets/Monstre.png',
+        dialogImageUrl : '',
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+    }
+
+
+    // Minion34
+    minion34 : Enemy = {
+        id : 5,
+        name : 'Minion32',
+        currentHealth : 50,
+        maxHealth : 50,
+        damage : 10,
+        combatImageUrl : '/assets/Monstre.png',
+        dialogImageUrl : '',
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+    }
 
     isInDialog : boolean = false;
 

@@ -56,7 +56,21 @@ export class CombatComponent implements OnInit {
       this.audioCombatChasseresse.pause();
       if(this.currentEnemy.id == 1) {
         this._globalService.isGunPickedUp = true;
+        this._globalService.isCombatTraitor = false;
       }
+      if(this.currentEnemy.id == 2) {
+        this._globalService.isCombatFriendly = false;
+      }
+      if(this.currentEnemy.id == 3) {
+        this._globalService.isCombatBeast = false;
+      }
+      if(this.currentEnemy.id == 4) {
+        this._globalService.isCombatMinion21 = false;
+      }
+      if(this.currentEnemy.id == 5) {
+        this._globalService.isCombatMinion34 = false;
+      }
+
     }
     this.playerAttacking = true;
 
