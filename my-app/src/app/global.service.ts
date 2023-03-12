@@ -41,8 +41,8 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        positionX : 200,
-        positionY : 200
+        positionX : 300,
+        positionY : 300
     }
 
     //Weapons
@@ -71,8 +71,9 @@ export class GlobalService {
     isPlayerTurn: boolean = true;
     isPlayerDefending: boolean = false;
 
-    superAttack: boolean = true;
+    superAttack: boolean = false;
     deathTraitor: boolean = true;
-    deathFriendly: boolean = true;
+    deathFriendly: boolean = false;
+
 
 }
