@@ -33,3 +33,5 @@
 
 <app-combat *ngIf="this.globalService.isInCombat === true"  @FadeIn @FadeOut></app-combat>
 <app-dialog *ngIf="this.globalService.isInDialog === true"  @FadeIn @FadeOut></app-dialog>
+
+<app-gameover *ngIf="this.globalService.player.positionX === 500 && this.globalService.player.positionY === 500 && this.globalService.isInCombat === false && this.globalService.isInDialog === false" @FadeIn @FadeOut></app-gameover>

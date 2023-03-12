@@ -24,7 +24,7 @@ export class GlobalService {
         maxHealth : 200,
         damage : 10,
         combatImageUrl : '/assets/Chasseurcombat.png',
-        dialogImageUrl : ''
+        dialogImageUrl : '/assets/Chasseurportrait.png'
     }
 
     hunter2 : Enemy = {
@@ -33,8 +33,8 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        combatImageUrl : '/assets/Chasseurcombat.png',
-        dialogImageUrl : ''
+        combatImageUrl : '/assets/Chasseressecombat.png',
+        dialogImageUrl : '/assets/Chasseresseportrait.png'
     }
 
     //Player
@@ -43,7 +43,8 @@ export class GlobalService {
         maxHealth : 100,
         damage : 10,
         positionX : 300,
-        positionY : 300
+        positionY : 300,
+        mort : false
     }
 
     //Weapons
@@ -69,7 +70,7 @@ export class GlobalService {
     isInDialog : boolean = false;
 
     /// Battle
-    currentEnemy : Enemy = this.hunter1;
+    currentEnemy : Enemy = this.hunter2;
     selectedWeapon : Weapon = this.axe;
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;

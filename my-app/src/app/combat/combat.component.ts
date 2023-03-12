@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -6,9 +6,26 @@ import { GlobalService } from '../global.service';
   templateUrl: './combat.component.html',
   styleUrls: ['./combat.component.css']
 })
-export class CombatComponent {
+export class CombatComponent implements OnInit {
 
   constructor(public _globalService : GlobalService) {}
+
+  audioCombatChasseur = new Audio();
+  audioCombatChasseresse = new Audio();
+
+  ngOnInit(): void {
+    this.audioCombatChasseur.src = "../assets/Music_CombatChasseur.wav";
+    this.audioCombatChasseresse.src = "../assets/Music_CombatChasseurFéminin.wav";
+    this.audioCombatChasseur.load();
+    this.audioCombatChasseresse.load();
+
+    if(this.currentEnemy.id === 1){
+      this.audioCombatChasseur.play();
+    }
+    if(this.currentEnemy.id === 2){
+      this.audioCombatChasseresse.play();
+    }
+  }
 
   currentEnemy = this._globalService.currentEnemy;
   player = this._globalService.player;
@@ -32,6 +49,8 @@ export class CombatComponent {
 
     if(this.currentEnemy.currentHealth <= 0) {
       this._globalService.isInCombat = false;
+      this.audioCombatChasseur.pause();
+      this.audioCombatChasseresse.pause();
       if(this.currentEnemy.id == 2) {
         this._globalService.isGunPickedUp = true;
       }
@@ -57,6 +76,17 @@ export class CombatComponent {
       } else {
         this.player.currentHealth -= this.currentEnemy.damage
       }
+    }
+
+    if(this.player.currentHealth <= 0) {
+      this.player.mort = true;
+      this._globalService.isInCombat = false;
+      this.audioCombatChasseur.pause();
+      this.audioCombatChasseresse.pause();
+    }
+    if(this.player.mort === true) {
+      this.player.positionX = 500;
+      this.player.positionY = 500;
     }
 
     this.playerTurn = true;
