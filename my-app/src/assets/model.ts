@@ -6,6 +6,7 @@ export interface Enemy {
     damage : number
     combatImageUrl : string
     dialogImageUrl : string
+    combatImageSangUrl : string
 }
 
 export interface Player {

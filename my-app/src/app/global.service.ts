@@ -24,7 +24,8 @@ export class GlobalService {
         maxHealth : 200,
         damage : 10,
         combatImageUrl : '/assets/Chasseurcombat.png',
-        dialogImageUrl : '/assets/Chasseurportrait.png'
+        dialogImageUrl : '/assets/Chasseurportrait.png',
+        combatImageSangUrl : '/assets/ChasseurcombatSANGOVERFIXXXXX.png'
     }
 
     hunter2 : Enemy = {
@@ -34,7 +35,8 @@ export class GlobalService {
         maxHealth : 100,
         damage : 10,
         combatImageUrl : '/assets/Chaseressecombat.png',
-        dialogImageUrl : '/assets/Chasseresseportrait.png'
+        dialogImageUrl : '/assets/Chasseresseportrait.png',
+        combatImageSangUrl : '/assets/ChaseressecombatSANGOVER.png'
     }
 
     //Player
@@ -63,8 +65,9 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 100,
-        combatImageUrl : '',
-        dialogImageUrl : ''
+        combatImageUrl : '/assets/Monstre.png',
+        dialogImageUrl : '',
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
     }
 
     isInDialog : boolean = false;
