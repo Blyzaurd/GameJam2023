@@ -44,4 +44,8 @@ export class Map20Component implements OnInit {
   goToDialog() {
     this.globalService.isInDialog = true;
   }
+
+  openWanted() {
+
+  }
 }
