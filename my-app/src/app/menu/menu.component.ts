@@ -28,6 +28,7 @@ export class MenuComponent implements OnInit {
     this.globalService.player.positionY = 0;
 
     this.audioIntro.pause();
+    alert("I am an alert box!");
   }
 
 }

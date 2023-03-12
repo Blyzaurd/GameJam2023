@@ -33,6 +33,7 @@ import { Map33Component } from './map33/map33.component';
 import { Map34Component } from './map34/map34.component';
 import { Map40Component } from './map40/map40.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { DialogComponent } from './dialog/dialog.component';
     Map44Component,
     AccueilComponent,
     CombatComponent,
-    DialogComponent
+    DialogComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

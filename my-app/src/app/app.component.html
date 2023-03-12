@@ -1,4 +1,8 @@
+<app-intro *ngIf="this.globalService.player.positionX === 300 && this.globalService.player.positionY === 300"></app-intro>
+
 <app-accueil *ngIf="this.globalService.player.positionX === 200 && this.globalService.player.positionY === 200" ></app-accueil>
+
+
 <app-menu *ngIf="this.globalService.player.positionX === 100 && this.globalService.player.positionY === 100" @FadeIn @FadeOut></app-menu>
 
 <app-map00 *ngIf="this.globalService.player.positionX === 0 && this.globalService.player.positionY === 0 && this.globalService.isInCombat === false && this.globalService.isInDialog === false" @FadeIn @FadeOut></app-map00>
