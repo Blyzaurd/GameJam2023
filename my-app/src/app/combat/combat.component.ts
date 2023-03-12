@@ -15,12 +15,15 @@ export class CombatComponent implements OnInit {
   audioShotGun = new Audio();
   audioCombatBoss = new Audio();
   //audioCombatMinion = new Audio();
+  audioCochon = new Audio();
 
   ngOnInit(): void {
     this.audioCombatChasseur.src = "../assets/Music_Combat_Chasseur.wav";
     this.audioCombatChasseresse.src = "../assets/Music_Combat_ChasseurFeminin.wav";
     this.audioShotGun.src = "../assets/SFX_Shotgun.wav";
     this.audioCombatBoss.src = "../assets/Music_Combat_BossFinal.wav";
+    this.audioCochon.src = "../assets/SFX_Cochon2.wav";
+    this.audioCochon.load();
     this.audioCombatBoss.load();
     this.audioShotGun.load();
     this.audioCombatChasseur.load();
@@ -33,6 +36,7 @@ export class CombatComponent implements OnInit {
     } else if(this.currentEnemy.id === 4 || this.currentEnemy.id === 5) {
       this.audioCombatChasseresse.play();
     } else if(this.currentEnemy.id === 3) {
+      this.audioCochon.play();
       this.audioCombatBoss.play();
     }
   }
@@ -198,7 +202,7 @@ export class CombatComponent implements OnInit {
     this.weaponIndex++;
     if(this.weaponIndex === 3) {
       this.weaponIndex = 0;
-    }    
+    }
   }
 
   leaveCombat() {
