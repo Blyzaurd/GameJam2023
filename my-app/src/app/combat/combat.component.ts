@@ -15,7 +15,7 @@ export class CombatComponent implements OnInit {
 
   ngOnInit(): void {
     this.audioCombatChasseur.src = "../assets/Music_CombatChasseur.wav";
-    this.audioCombatChasseresse.src = "../assets/Music_CombatChasseurFéminin.wav";
+    this.audioCombatChasseresse.src = "../assets/Music_CombatChasseurFeminin.wav";
     this.audioCombatChasseur.load();
     this.audioCombatChasseresse.load();
 
