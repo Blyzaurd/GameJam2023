@@ -15,8 +15,8 @@ export class CombatComponent implements OnInit {
   audioShotGun = new Audio();
 
   ngOnInit(): void {
-    this.audioCombatChasseur.src = "../assets/Music_CombatChasseur.wav";
-    this.audioCombatChasseresse.src = "../assets/Music_CombatChasseurFeminin.wav";
+    this.audioCombatChasseur.src = "../assets/Music_Combat_Chasseur.wav";
+    this.audioCombatChasseresse.src = "../assets/Music_Combat_ChasseurFeminin.wav";
     this.audioShotGun.src = "../assets/SFX_Shotgun.wav";
     this.audioShotGun.load();
     this.audioCombatChasseur.load();
