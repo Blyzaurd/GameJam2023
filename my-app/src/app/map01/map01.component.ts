@@ -8,20 +8,23 @@ import { GlobalService } from '../global.service';
 })
 export class Map01Component implements OnInit {
 
-  constructor(private globalService: GlobalService){}
+  constructor(public globalService: GlobalService){}
 
   audio01 = new Audio();
   audioPas1 = new Audio();
   audioPas2 = new Audio();
 
   ngOnInit(): void {
-    this.audio01.src = "../assets/Music-Exploration2.wav";
+    this.audio01.src = "../assets/Music_Exploration.wav";
     this.audioPas1.src = "../assets/SFX_FootstepsDirt1.wav";
     this.audioPas2.src = "../assets/SFX_FootstepsLeaves2.wav";
     this.audioPas1.load();
     this.audioPas2.load();
     this.audio01.load();
     this.audio01.play();
+    // if(this.globalService.audioExploration.ended){
+    //   this.globalService.audioExploration.play();
+    // }
   }
 
   goToMap00() {

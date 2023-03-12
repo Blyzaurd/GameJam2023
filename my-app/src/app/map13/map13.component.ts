@@ -23,19 +23,6 @@ export class Map13Component implements OnInit {
     this.audioThunder.play();
   }
 
-  goToMap12() {
-    this.globalService.player.positionX = 1;
-    this.globalService.player.positionY = 2;
-    this.audioPas1.play();
-    this.audioPas2.play();
-  }
-
-  goToMap14() {
-    this.globalService.player.positionX = 1;
-    this.globalService.player.positionY = 4;
-    this.audioPas1.play();
-    this.audioPas2.play();
-  }
   goToMap03() {
     this.globalService.player.positionX = 0;
     this.globalService.player.positionY = 3;

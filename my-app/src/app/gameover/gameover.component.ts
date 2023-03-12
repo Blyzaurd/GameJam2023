@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -6,9 +6,17 @@ import { GlobalService } from '../global.service';
   templateUrl: './gameover.component.html',
   styleUrls: ['./gameover.component.css']
 })
-export class GameoverComponent {
+export class GameoverComponent implements OnInit {
 
-  constructor(private globalService: GlobalService){}
+  constructor(public globalService: GlobalService){}
+
+  audioFin = new Audio();
+
+  ngOnInit(): void {
+    this.audioFin.src = "../assets/Music_Fin.wav";
+    this.audioFin.load();
+    this.audioFin.play();
+  }
 
   goToMenu(){
     this.globalService.player.positionX = 200;
@@ -31,5 +39,7 @@ export class GameoverComponent {
     this.globalService.isSisterPageRead = false;
     this.globalService.isTraitorHelping = false;
     this.globalService.isWantedPageRead = false;
+
+    this.audioFin.pause();
   }
 }

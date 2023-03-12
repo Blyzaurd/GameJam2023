@@ -10,6 +10,8 @@ export class GlobalService {
 
     constructor() {}
 
+    //audioExploration = new Audio();
+
     isCombatBeast = true;
     isCombatFriendly = true;
     isCombatTraitor = true;
@@ -106,7 +108,7 @@ export class GlobalService {
     isInDialog : boolean = false;
 
     /// Battle
-    currentEnemy : Enemy = this.hunter2;
+    currentEnemy : Enemy = this.hunter1;
     selectedWeapon : Weapon = this.axe;
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;
@@ -122,4 +124,13 @@ export class GlobalService {
     isSisterPageRead : boolean = false;
     isTraitorHelping : boolean = false;
     isFriendlyHelping : boolean = false;
+
+
+    
+
+
+
+    // Death final quote
+
+    finalQuote = "";
 }
