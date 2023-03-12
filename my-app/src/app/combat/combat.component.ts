@@ -129,7 +129,7 @@ export class CombatComponent implements OnInit {
         this._globalService.finalQuote = "La chasseresse à mis fin à vos jours.  Si seulement vous aviez pu faire équipe avec elle. "
       }
       if(this.currentEnemy.id == 3) {
-        this._globalService.finalQuote = "La grande bête de HamShire vous a terrassé.  Qui pourra pourras mettre fin à la nuit éternelle ?"
+        this._globalService.finalQuote = "La grande bête de HamShire vous a terrassé. Qui pourra pourras mettre fin à la nuit éternelle ?  Peut-être qu'un de meilleure arme ou l'aide de quelqu'un aurait pu vous aider"
       }
       if(this.currentEnemy.id == 4) {
         this._globalService.finalQuote = "Vous avez été tué par un monstre de la forêt, quelle malchance."
