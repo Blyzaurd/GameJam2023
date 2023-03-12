@@ -126,9 +126,11 @@ export class CombatComponent implements OnInit {
   enemyAttack() {
     if(this.currentEnemy.currentHealth <= 50 && this._globalService.isTraitorHelping === true && this.currentEnemy.id === 3) {
       this._globalService.isCombatBeast = false;
+      this._globalService.isInCombat = false;
       this._globalService.player.positionX = 500;
       this._globalService.player.positionY = 500;
-      this._globalService.finalQuote = "trahison mon pote"
+      alert("Jhon vous a trahi")
+      this._globalService.finalQuote = "Aucune chance que je sépare la prime, Gamin!"
     }
     this.playerAttacking = false;
     
