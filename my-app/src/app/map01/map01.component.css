@@ -6,6 +6,26 @@ div {
   border: 1px solid red;
 }
 
+.frangine {
+  width: 100px;
+  height: 180px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
 
 .droite {
   position: absolute;
