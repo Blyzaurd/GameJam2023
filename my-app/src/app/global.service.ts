@@ -25,7 +25,7 @@ export class GlobalService {
         damage : 10,
         combatImageUrl : '/assets/Chasseurcombat.png',
         dialogImageUrl : '/assets/Chasseurportrait.png',
-        combatImageSangUrl : '/assets/ChasseurSangOVER.png'
+        combatImageSangUrl : '/assets/ChasseurcombatSANGOVERFIXXXXX.png'
     }
 
     hunter2 : Enemy = {
@@ -36,7 +36,7 @@ export class GlobalService {
         damage : 10,
         combatImageUrl : '/assets/Chaseressecombat.png',
         dialogImageUrl : '/assets/Chasseresseportrait.png',
-        combatImageSangUrl : '/assets/ChaseressecombatSANG.png'
+        combatImageSangUrl : '/assets/ChaseressecombatSANGOVER.png'
     }
 
     //Player
@@ -67,7 +67,7 @@ export class GlobalService {
         damage : 100,
         combatImageUrl : '/assets/Monstre.png',
         dialogImageUrl : '',
-        combatImageSangUrl : '/assets/MonstreSANG.png'
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
     }
 
     isInDialog : boolean = false;
