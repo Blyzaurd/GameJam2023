@@ -124,4 +124,10 @@ export class GlobalService {
     isSisterPageRead : boolean = false;
     isTraitorHelping : boolean = false;
     isFriendlyHelping : boolean = false;
+
+
+
+    // Death final quote
+
+    finalQuote = "";
 }

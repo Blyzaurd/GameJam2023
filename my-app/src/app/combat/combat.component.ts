@@ -119,6 +119,26 @@ export class CombatComponent implements OnInit {
       this._globalService.isInCombat = false;
       this.audioCombatChasseur.pause();
       this.audioCombatChasseresse.pause();
+
+
+
+      if(this.currentEnemy.id == 1) {
+        this._globalService.finalQuote = "Vous avez été tué par le chasseur. En regardant votre cadavre atteindre le sol il vous lanche :  Un peu trop ambitieux pour un gamin."
+      }
+      if(this.currentEnemy.id == 2) {
+        this._globalService.finalQuote = "La chasseresse à mis fin à vos jours.  Si seulement vous aviez pu faire équipe avec elle. "
+      }
+      if(this.currentEnemy.id == 3) {
+        this._globalService.finalQuote = "La grande bête de HamShire vous a terrassé.  Qui pourra pourras mettre fin à la nuit éternelle ?"
+      }
+      if(this.currentEnemy.id == 4) {
+        this._globalService.finalQuote = "Vous avez été tué par un monstre de la forêt, quelle malchance."
+      }
+      if(this.currentEnemy.id == 5) {
+        this._globalService.finalQuote = "Vous avez été tué par un monstre de la forêt, quelle malchance."
+      }
+
+
     }
     if(this.player.mort === true) {
       this.player.positionX = 500;

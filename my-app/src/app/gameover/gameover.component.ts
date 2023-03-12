@@ -8,7 +8,7 @@ import { GlobalService } from '../global.service';
 })
 export class GameoverComponent implements OnInit {
 
-  constructor(private globalService: GlobalService){}
+  constructor(public globalService: GlobalService){}
 
   audioFin = new Audio();
 
