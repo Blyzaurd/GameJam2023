@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-wanted-page',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./wanted-page.component.css']
 })
 export class WantedPageComponent {
-
+  constructor(private _globalService: GlobalService){}
+  back() {
+    this._globalService.isReadingWanted = false;
+  }
 }

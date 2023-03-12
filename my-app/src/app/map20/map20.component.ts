@@ -53,7 +53,8 @@ export class Map20Component implements OnInit {
 
   openWanted() {
     this.audioPapier.play();
-    alert("Vous lisez une affiche de recherche :  '500 livres sterling pour la tête de la bête.' ")
+    console.log("allo")
+    this.globalService.isReadingWanted = true;
     this.globalService.isWantedPageRead = true;
   }
 

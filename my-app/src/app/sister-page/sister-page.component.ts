@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-sister-page',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./sister-page.component.css']
 })
 export class SisterPageComponent {
-
+  constructor(private _globalService : GlobalService){}
+  back() {
+    this._globalService.isReadingSister = false;
+  }
 }
