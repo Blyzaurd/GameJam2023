@@ -1,12 +1,19 @@
 
 <div class="background">
+<div class="body">
     <div class="page">
         <div class="dialog">
             <p>{{ currentDialog }}</p>
         </div>
         <div class="button">
-          <button (click)="teamUp()">Faire equipe</button>
+            <button *ngIf="(isSister == true && currentEnemy.id === 1) || (isWanted == true && currentEnemy.id === 2)" (click)="teamUp()">Faire equipe</button>
             <button (click)="engage()">Attaquer</button>
+            <button (click)="quit()">Quitter</button>
+        </div>
+        <div class="dialog">
+            <p>{{ myCurrentDialog }}</p>
         </div>
     </div>
+</div>
+<img src={{currentEnemy.dialogImageUrl}}>
 </div>
