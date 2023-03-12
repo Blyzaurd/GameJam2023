@@ -32,6 +32,7 @@ export class Map20Component implements OnInit {
     this.globalService.player.positionY = 0;
     this.audio20.pause();
     this.audioPas1.play();
+    this.audioPas2.play();
   }
 
   goToMap30() {
