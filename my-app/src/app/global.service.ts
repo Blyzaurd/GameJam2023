@@ -10,6 +10,11 @@ export class GlobalService {
 
     constructor() {}
 
+    isCombatBeast = true; 
+    isCombatFriendly = true;
+    isCombatTraitor = true;
+
+
     isGunPickedUp = false;
     isAxePickedUp = false;
     isCrowbarPickedUp = false;

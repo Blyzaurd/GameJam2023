@@ -13,6 +13,7 @@ export class AccueilComponent {
   goToMenu(){
     this.globalService.player.positionX = 100;
     this.globalService.player.positionY = 100;
+    
   }
 
 }
