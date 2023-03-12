@@ -11,9 +11,13 @@ export class GameoverComponent implements OnInit {
   constructor(public globalService: GlobalService){}
 
   audioFin = new Audio();
+  audioMort = new Audio();
 
   ngOnInit(): void {
     this.audioFin.src = "../assets/Music_Fin.wav";
+    this.audioMort.src = "../assets/Stinger_Mort.wav";
+    this.audioMort.load();
+    this.audioMort.play();
     this.audioFin.load();
     this.audioFin.play();
   }

@@ -132,6 +132,7 @@ export class CombatComponent implements OnInit {
       this._globalService.isInCombat = false;
       this.audioCombatChasseur.pause();
       this.audioCombatChasseresse.pause();
+      this.audioCombatBoss.pause();
 
 
 
