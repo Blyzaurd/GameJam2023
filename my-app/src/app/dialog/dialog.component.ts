@@ -15,13 +15,27 @@ export class DialogComponent implements OnInit {
   isSister = this._globalService.isSisterPageRead;
   isWanted = this._globalService.isWantedPageRead;
 
+  audioCrayon = new Audio();
+  audioDialogM = new Audio();
+  audioDialogF = new Audio();
+
   constructor(public _globalService : GlobalService) {}
 
   ngOnInit(): void {
+    this.audioCrayon.src = "/assets/SFX_Crayon1.wav";
+    this.audioDialogM.src = "/assets/Music_Dialogue_Chasseur.wav"
+    this.audioDialogF.src = "//assets/Music_Dialogue_ChasseurFeminin.wav"
+    this.audioDialogM.load();
+    this.audioDialogF.load();
+    this.audioCrayon.load();
+    this.audioCrayon.play();
+
     if(this.currentEnemy.id == 1) {
+      this.audioDialogM.play();
       this.currentDialog = this.currentEnemy.name + " : Tu ne sera pas un obstacle a mon enrichissement, gamin...";
     }
     if(this.currentEnemy.id == 2) {
+      this.audioDialogF.play();
       this.currentDialog = this.currentEnemy.name + " : Mon carreau saura trouver sa cible.";
     }
   }
@@ -29,8 +43,10 @@ export class DialogComponent implements OnInit {
   teamUp() {
     this.currentDialog = '';
     if(this.currentEnemy.id == 1) {
+      this.audioCrayon.play();
       this.myCurrentDialog = "Moi : J'ai vu qu'il avait une prime de 500 livres pour tuer la bete, voudriez-vous faire equipe et partager la prime?"
       setTimeout(() => {
+        this.audioCrayon.play();
         if(this._globalService.isFriendlyHelping) {
           this.currentDialog = this.currentEnemy.name + " : Séparé la prime en trois part ? Quelle idiotie gamin!"
         } else {
@@ -39,8 +55,10 @@ export class DialogComponent implements OnInit {
       }, 1000)
     }
     if(this.currentEnemy.id == 2) {
+      this.audioCrayon.play();
       this.myCurrentDialog = "Moi : Etes-vous la chasseuse qui s'est fait enlever sa soeur par la bete? Voudriez-vous faire equipe?"
       setTimeout(() => {
+        this.audioCrayon.play();
         if(this._globalService.isTraitorHelping) {
           this.currentDialog = this.currentEnemy.name + " : Faire équipe avec un assassin comme lui ? JAMAIS !"
         } else {
@@ -52,14 +70,14 @@ export class DialogComponent implements OnInit {
 
   quit() {
     this._globalService.isInDialog = false;
+    this.audioDialogM.pause();
+    this.audioDialogF.pause();
   }
 
   engage() {
-    if(this.currentEnemy.id === 1) {
-
-    }
-    if(this.currentEnemy.id === 2) {
-      
-    }
+    this.audioDialogM.pause();
+    this.audioDialogF.pause();
+    this._globalService.isInDialog = false;
+    this._globalService.isInCombat = true;
   }
 }
