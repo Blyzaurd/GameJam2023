@@ -6,6 +6,27 @@ div {
   border: 1px solid red;
 }
 
+.hache {
+  height: 170px;
+  width: 150px;
+  position: absolute;
+  top: 54%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 30px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  outline: none;
+}
+
 .wanted {
   height: 70px;
   width: 50px;
