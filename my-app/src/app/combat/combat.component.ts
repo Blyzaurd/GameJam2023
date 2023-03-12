@@ -12,10 +12,13 @@ export class CombatComponent implements OnInit {
 
   audioCombatChasseur = new Audio();
   audioCombatChasseresse = new Audio();
+  audioShotGun = new Audio();
 
   ngOnInit(): void {
     this.audioCombatChasseur.src = "../assets/Music_CombatChasseur.wav";
     this.audioCombatChasseresse.src = "../assets/Music_CombatChasseurFeminin.wav";
+    this.audioShotGun.src = "../assets/SFX_Shotgun.wav";
+    this.audioShotGun.load();
     this.audioCombatChasseur.load();
     this.audioCombatChasseresse.load();
 
@@ -89,6 +92,10 @@ export class CombatComponent implements OnInit {
       } else {
         this.player.currentHealth -= this.currentEnemy.damage
       }
+    }
+
+    if(this.currentEnemy.id === 1) {
+      this.audioShotGun.play();
     }
 
     this.enemyAttacking = true;
