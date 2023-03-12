@@ -33,7 +33,7 @@ export class GlobalService {
         maxHealth : 200,
         damage : 10,
         combatImageUrl : '/assets/Chasseurcombat.png',
-        dialogImageUrl : '/assets/Chasseurportrait.png',
+        dialogImageUrl : '/assets/Chasseurguillaume2.png',
         combatImageSangUrl : '/assets/ChasseurcombatSANGOVERFIXXXXX.png'
     }
 
@@ -43,8 +43,8 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        combatImageUrl : '/assets/Chaseressecombat.png',
-        dialogImageUrl : '/assets/Chasseresseportrait.png',
+        combatImageUrl : '/asets/Chaseressecombat.png',
+        dialogImageUrl : '/assets/Chasseresseguillaume2.png',
         combatImageSangUrl : '/assets/ChaseressecombatSANGOVER.png'
     }
 

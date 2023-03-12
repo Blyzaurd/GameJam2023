@@ -36,7 +36,7 @@ export class DialogComponent implements OnInit {
         } else {
           this.currentDialog = this.currentEnemy.name + " : Astucieux gamin... Je suis d'accord.  On divise la prime à part égal.  On se rejoint sur le champ de bataille."
         }
-      }, 750)
+      }, 1000)
     }
     if(this.currentEnemy.id == 2) {
       this.myCurrentDialog = "Moi : Etes-vous la chasseuse qui s'est fait enlever sa soeur par la bete? Voudriez-vous faire equipe?"
@@ -46,7 +46,7 @@ export class DialogComponent implements OnInit {
         } else {
           this.currentDialog = this.currentEnemy.name + " : Faire équipe ? Tout pour sortir de cet enfer et venger ma soeur."
         }
-      }, 750)
+      }, 1000)
     }
   }
 
@@ -56,7 +56,7 @@ export class DialogComponent implements OnInit {
 
   engage() {
     if(this.currentEnemy.id === 1) {
-      
+
     }
     if(this.currentEnemy.id === 2) {
       
