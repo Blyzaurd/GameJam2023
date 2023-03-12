@@ -28,7 +28,7 @@ export class GlobalService {
     //Hunters
     hunter1 : Enemy = {
         id : 1,
-        name : 'Traitor',
+        name : 'Jhon',
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
@@ -39,7 +39,7 @@ export class GlobalService {
 
     hunter2 : Enemy = {
         id : 2,
-        name : 'Friendly',
+        name : 'Louise',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
