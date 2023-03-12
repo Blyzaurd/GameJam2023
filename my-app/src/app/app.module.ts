@@ -36,6 +36,8 @@ import { DialogComponent } from './dialog/dialog.component';
 import { IntroComponent } from './intro/intro.component';
 import { GameoverComponent } from './gameover/gameover.component';
 import { VictoireComponent } from './victoire/victoire.component';
+import { WantedPageComponent } from './wanted-page/wanted-page.component';
+import { SisterPageComponent } from './sister-page/sister-page.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { VictoireComponent } from './victoire/victoire.component';
     DialogComponent,
     IntroComponent,
     GameoverComponent,
-    VictoireComponent
+    VictoireComponent,
+    WantedPageComponent,
+    SisterPageComponent
   ],
   imports: [
     BrowserModule,

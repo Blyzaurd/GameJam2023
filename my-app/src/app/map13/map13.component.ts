@@ -12,11 +12,15 @@ export class Map13Component implements OnInit {
   audioThunder = new Audio();
   audioPas1 = new Audio();
   audioPas2 = new Audio();
+  audio13 = new Audio();
 
   ngOnInit(): void {
     this.audioThunder.src = "../assets/SFX_Thunder2.wav";
     this.audioPas1.src = "../assets/SFX_FootstepsDirt1.wav";
     this.audioPas2.src = "../assets/SFX_FootstepsLeaves2.wav";
+    this.audio13.src = "../assets/Music_Exploration.wav";
+    this.audio13.load();
+    this.audio13.play();
     this.audioPas1.load();
     this.audioPas2.load();
     this.audioThunder.load();
@@ -34,5 +38,11 @@ export class Map13Component implements OnInit {
     this.globalService.player.positionY = 3;
     this.audioPas2.play();
     this.audioPas1.play();
+  }
+
+  combatBoss() {
+    this.globalService.currentEnemy = this.globalService.greatBeast;
+    this.globalService.isInCombat = true;
+
   }
 }

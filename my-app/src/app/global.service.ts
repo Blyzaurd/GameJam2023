@@ -43,7 +43,7 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
-        combatImageUrl : '/asets/Chaseressecombat.png',
+        combatImageUrl : '/assets/Chaseressecombat.png',
         dialogImageUrl : '/assets/Chasseresseguillaume2.png',
         combatImageSangUrl : '/assets/ChaseressecombatSANGOVER.png'
     }
@@ -87,7 +87,7 @@ export class GlobalService {
         currentHealth : 50,
         maxHealth : 50,
         damage : 10,
-        combatImageUrl : '/assets/Monstre.png',
+        combatImageUrl : '/assets/Chien.png',
         dialogImageUrl : '',
         combatImageSangUrl : '/assets/MonstreSANGOVER.png'
     }
@@ -100,7 +100,7 @@ export class GlobalService {
         currentHealth : 50,
         maxHealth : 50,
         damage : 10,
-        combatImageUrl : '/assets/Monstre.png',
+        combatImageUrl : '/assets/Chien.png',
         dialogImageUrl : '',
         combatImageSangUrl : '/assets/MonstreSANGOVER.png'
     }
@@ -120,13 +120,15 @@ export class GlobalService {
 
 
     //Dialog
+    isReadingWanted : boolean = false;
+    isReadingSister : boolean = false;
     isWantedPageRead : boolean = false;
     isSisterPageRead : boolean = false;
     isTraitorHelping : boolean = false;
     isFriendlyHelping : boolean = false;
 
 
-    
+
 
 
 
