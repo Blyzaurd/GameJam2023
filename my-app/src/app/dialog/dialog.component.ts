@@ -38,14 +38,13 @@ export class DialogComponent implements OnInit {
       this.audioDialogF.play();
       this.currentDialog = this.currentEnemy.name + " : Mon carreau saura trouver sa cible.";
     }
-    // this._globalService.isCombatBeast = false;
-    // this._globalService.isCombatFriendly = false;
+    
     this._globalService.isCombatTraitor = false;
-    //this._globalService.isCombatMinion21 = false;
-    //this._globalService.isCombatMinion34 = false;
+    this._globalService.isCombatFriendly = false;
   }
 
   teamUp() {
+    this._globalService.isTraitorHelping =true;
     this.currentDialog = '';
     if(this.currentEnemy.id == 1) {
       this.audioCrayon.play();
@@ -61,6 +60,7 @@ export class DialogComponent implements OnInit {
       
     }
     if(this.currentEnemy.id == 2) {
+      this._globalService.isFriendlyHelping =true;
       this.audioCrayon.play();
       this.myCurrentDialog = "Moi : Etes-vous la chasseuse qui s'est fait enlever sa soeur par la bete? Voudriez-vous faire equipe?"
       setTimeout(() => {
@@ -68,6 +68,7 @@ export class DialogComponent implements OnInit {
         if(this._globalService.isTraitorHelping) {
           this.currentDialog = this.currentEnemy.name + " : Faire équipe avec un assassin comme lui ? JAMAIS !"
         } else {
+          
           this.currentDialog = this.currentEnemy.name + " : Faire équipe ? Tout pour sortir de cet enfer et venger ma soeur."
         }
       }, 1000)

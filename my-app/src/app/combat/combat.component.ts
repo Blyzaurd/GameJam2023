@@ -39,6 +39,9 @@ export class CombatComponent implements OnInit {
       this.audioCochon.play();
       this.audioCombatBoss.play();
     }
+    if(this._globalService.isFriendlyHelping === true || this._globalService.isTraitorHelping === true){
+      this.player.damage *= 2;
+    }
   }
 
   currentEnemy = this._globalService.currentEnemy;
@@ -58,21 +61,17 @@ export class CombatComponent implements OnInit {
   }
 
   attackEnemy() {
+    
     this.enemyAttacking = false;
-    if(this._globalService.isFriendlyHelping === true || this._globalService.isTraitorHelping === true){
-      this.player.damage *= 2;
-    }
+    
     if(this.playerTurn == true) {
       this.currentEnemy.currentHealth -= this.player.damage;
     }
 
-    if(this.currentEnemy.currentHealth <= 50 && this._globalService.isTraitorHelping === true && this.currentEnemy.id === 3) {
-      this._globalService.isCombatBeast = false;
-      this._globalService.player.positionX = 700;
-      this._globalService.player.positionY = 700;
-    }
+    
 
     if(this.currentEnemy.currentHealth <= 0) {
+      this._globalService.player.currentHealth = 100;
       this._globalService.isInCombat = false;
       this.audioCombatChasseur.pause();
       this.audioCombatChasseresse.pause();
@@ -125,7 +124,14 @@ export class CombatComponent implements OnInit {
   }
 
   enemyAttack() {
+    if(this.currentEnemy.currentHealth <= 50 && this._globalService.isTraitorHelping === true && this.currentEnemy.id === 3) {
+      this._globalService.isCombatBeast = false;
+      this._globalService.player.positionX = 500;
+      this._globalService.player.positionY = 500;
+      this._globalService.finalQuote = "trahison mon pote"
+    }
     this.playerAttacking = false;
+    
     if(this.playerTurn == false) {
       if(this._globalService.isPlayerDefending == true) {
         this.player.currentHealth -= (this.currentEnemy.damage / 2)
