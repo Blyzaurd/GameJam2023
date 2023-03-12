@@ -38,6 +38,11 @@ export class DialogComponent implements OnInit {
       this.audioDialogF.play();
       this.currentDialog = this.currentEnemy.name + " : Mon carreau saura trouver sa cible.";
     }
+    // this._globalService.isCombatBeast = false;
+    // this._globalService.isCombatFriendly = false;
+    this._globalService.isCombatTraitor = false;
+    //this._globalService.isCombatMinion21 = false;
+    //this._globalService.isCombatMinion34 = false;
   }
 
   teamUp() {
@@ -53,6 +58,7 @@ export class DialogComponent implements OnInit {
           this.currentDialog = this.currentEnemy.name + " : Astucieux gamin... Je suis d'accord.  On divise la prime à part égal.  On se rejoint sur le champ de bataille."
         }
       }, 1000)
+      
     }
     if(this.currentEnemy.id == 2) {
       this.audioCrayon.play();
@@ -72,6 +78,7 @@ export class DialogComponent implements OnInit {
     this._globalService.isInDialog = false;
     this.audioDialogM.pause();
     this.audioDialogF.pause();
+    
   }
 
   engage() {

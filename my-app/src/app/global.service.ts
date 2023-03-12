@@ -84,7 +84,7 @@ export class GlobalService {
         name : 'Great Beast of HamShire',
         currentHealth : 100,
         maxHealth : 100,
-        damage : 100,
+        damage : 1,
         combatImageUrl : '/assets/Monstre.png',
         dialogImageUrl : '',
         combatImageSangUrl : '/assets/MonstreSANGOVER.png'

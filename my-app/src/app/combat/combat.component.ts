@@ -55,8 +55,17 @@ export class CombatComponent implements OnInit {
 
   attackEnemy() {
     this.enemyAttacking = false;
+    if(this._globalService.isFriendlyHelping === true || this._globalService.isTraitorHelping === true){
+      this.player.damage *= 2;
+    }
     if(this.playerTurn == true) {
       this.currentEnemy.currentHealth -= this.player.damage;
+    }
+
+    if(this.currentEnemy.currentHealth <= 50 && this._globalService.isTraitorHelping === true && this.currentEnemy.id === 3) {
+      this._globalService.isCombatBeast = false;
+      this._globalService.player.positionX = 700;
+      this._globalService.player.positionY = 700;
     }
 
     if(this.currentEnemy.currentHealth <= 0) {
@@ -143,8 +152,11 @@ export class CombatComponent implements OnInit {
       if(this.currentEnemy.id == 2) {
         this._globalService.finalQuote = "La chasseresse à mis fin à vos jours.  Si seulement vous aviez pu faire équipe avec elle. "
       }
-      if(this.currentEnemy.id == 3) {
+      if(this.currentEnemy.id == 3 && !this._globalService.isTraitorHelping === true) {
         this._globalService.finalQuote = "La grande bête de HamShire vous a terrassé. Qui pourra pourras mettre fin à la nuit éternelle ?  Peut-être qu'un de meilleure arme ou l'aide de quelqu'un aurait pu vous aider"
+      }
+      if(this.currentEnemy.id == 3 && this._globalService.isTraitorHelping === true) {
+        this._globalService.finalQuote = " Trahison "
       }
       if(this.currentEnemy.id == 4) {
         this._globalService.finalQuote = "Vous avez été tué par un monstre de la forêt, quelle malchance."
