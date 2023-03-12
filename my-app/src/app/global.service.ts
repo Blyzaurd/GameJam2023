@@ -15,6 +15,8 @@ export class GlobalService {
     isCombatBeast = true;
     isCombatFriendly = true;
     isCombatTraitor = true;
+    isCombatMinion21 = true;
+    isCombatMinion34 = true;
 
 
     isGunPickedUp = false;
@@ -26,7 +28,7 @@ export class GlobalService {
     //Hunters
     hunter1 : Enemy = {
         id : 1,
-        name : 'Jambon',
+        name : 'Traitor',
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
@@ -37,7 +39,7 @@ export class GlobalService {
 
     hunter2 : Enemy = {
         id : 2,
-        name : 'Jambon',
+        name : 'Friendly',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
@@ -68,10 +70,36 @@ export class GlobalService {
     // Great Beast
     greatBeast : Enemy = {
         id : 3,
-        name : 'Jambon',
+        name : 'Great Beast of HamShire',
         currentHealth : 100,
         maxHealth : 100,
         damage : 100,
+        combatImageUrl : '/assets/Monstre.png',
+        dialogImageUrl : '',
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+    }
+
+
+    // Minion21
+    minion21 : Enemy = {
+        id : 4,
+        name : 'Minion21',
+        currentHealth : 50,
+        maxHealth : 50,
+        damage : 10,
+        combatImageUrl : '/assets/Monstre.png',
+        dialogImageUrl : '',
+        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+    }
+
+
+    // Minion34
+    minion34 : Enemy = {
+        id : 5,
+        name : 'Minion32',
+        currentHealth : 50,
+        maxHealth : 50,
+        damage : 10,
         combatImageUrl : '/assets/Monstre.png',
         dialogImageUrl : '',
         combatImageSangUrl : '/assets/MonstreSANGOVER.png'

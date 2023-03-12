@@ -7,7 +7,7 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./map34.component.css']
 })
 export class Map34Component implements OnInit {
-  constructor(private globalService: GlobalService){}
+  constructor(public globalService: GlobalService){}
 
   audio34 = new Audio();
   audioPas1 = new Audio();
