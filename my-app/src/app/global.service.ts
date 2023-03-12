@@ -126,6 +126,9 @@ export class GlobalService {
     isFriendlyHelping : boolean = false;
 
 
+    
+
+
 
     // Death final quote
 

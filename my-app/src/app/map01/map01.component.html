@@ -1,6 +1,6 @@
 <div class="container">
   <p>(0,1)</p>
-  <button class="droite" (click)="goToMap11()">Droite</button>
-  <button class="droit" (click)="goToMap02()">Tout droit</button>
-  <button class="bas" (click)="goToMap00()">Bas</button>
+  <button class="droite" (click)="goToMap11()" [disabled]="globalService.isCombatFriendly">Droite</button>
+  <button class="droit" (click)="goToMap02()" [disabled]="globalService.isCombatFriendly">Tout droit</button>
+  <button class="bas" (click)="goToMap00()" [disabled]="globalService.isCombatFriendly">Bas</button>
 </div>
