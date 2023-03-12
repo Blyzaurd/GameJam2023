@@ -44,7 +44,6 @@ export class DialogComponent implements OnInit {
   }
 
   teamUp() {
-    this._globalService.isTraitorHelping =true;
     this.currentDialog = '';
     if(this.currentEnemy.id == 1) {
       this.audioCrayon.play();
@@ -54,6 +53,8 @@ export class DialogComponent implements OnInit {
         if(this._globalService.isFriendlyHelping) {
           this.currentDialog = this.currentEnemy.name + " : Séparé la prime en trois part ? Quelle idiotie gamin!"
         } else {
+          
+    this._globalService.isTraitorHelping =true;
           this.currentDialog = this.currentEnemy.name + " : Astucieux gamin... Je suis d'accord.  On divise la prime à part égal.  On se rejoint sur le champ de bataille."
         }
       }, 1000)
@@ -69,6 +70,7 @@ export class DialogComponent implements OnInit {
           this.currentDialog = this.currentEnemy.name + " : Faire équipe avec un assassin comme lui ? JAMAIS !"
         } else {
           
+      this._globalService.isFriendlyHelping =true;
           this.currentDialog = this.currentEnemy.name + " : Faire équipe ? Tout pour sortir de cet enfer et venger ma soeur."
         }
       }, 1000)

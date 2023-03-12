@@ -22,6 +22,9 @@ export class MenuComponent implements OnInit {
     this.audioIntro.load();
     this.audioClick.load();
     this.audioIntro.play();
+    
+    this.globalService.isTraitorHelping = false;
+    this.globalService.isFriendlyHelping = false;
   }
 
   goToMap20() {
