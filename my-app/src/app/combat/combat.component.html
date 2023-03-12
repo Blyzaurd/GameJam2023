@@ -6,7 +6,7 @@
       <p>PV : {{currentEnemy.currentHealth}}/{{currentEnemy.maxHealth}}</p>
     </div>
     <img src={{currentEnemy.combatImageUrl}} *ngIf="playerAttacking === false">
-    <img src="/assets/Tachedesang.png" *ngIf="playerAttacking === true">
+    <img src={{currentEnemy.combatImageSangUrl}} *ngIf="playerAttacking === true">
     <div class="vie_player">
       <p class="sans-rouge" *ngIf="enemyAttacking === false">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
       <p class="rouge" *ngIf="enemyAttacking === true">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
