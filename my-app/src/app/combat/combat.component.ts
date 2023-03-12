@@ -21,8 +21,7 @@ export class CombatComponent implements OnInit {
 
     if(this.currentEnemy.id === 1){
       this.audioCombatChasseur.play();
-    }
-    if(this.currentEnemy.id === 2){
+    } else if(this.currentEnemy.id === 2){
       this.audioCombatChasseresse.play();
     }
   }
