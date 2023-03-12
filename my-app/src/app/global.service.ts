@@ -10,6 +10,8 @@ export class GlobalService {
 
     constructor() {}
 
+    //audioExploration = new Audio();
+
     isCombatBeast = true;
     isCombatFriendly = true;
     isCombatTraitor = true;
