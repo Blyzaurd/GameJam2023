@@ -39,7 +39,8 @@ export class CombatComponent implements OnInit {
 
   currentEnemy = this._globalService.currentEnemy;
   player = this._globalService.player;
-  selectedWeapon = this._globalService.selectedWeapon;
+  weaponList = this._globalService.weaponList;
+  weaponIndex = 0;
   playerTurn = this._globalService.isPlayerTurn;
   playerAttacking: boolean = false;
   enemyAttacking: boolean = false;
@@ -180,7 +181,12 @@ export class CombatComponent implements OnInit {
   }
 
   switchWeapon() {
-    this.player.damage = this.selectedWeapon.damage
+    this._globalService.player.damage = this.weaponList[this.weaponIndex].damage;
+    alert("Vous venez d'equiper " + this.weaponList[this.weaponIndex].name);
+    this.weaponIndex++;
+    if(this.weaponIndex === 3) {
+      this.weaponIndex = 0;
+    }    
   }
 
   leaveCombat() {
