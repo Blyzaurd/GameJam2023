@@ -51,15 +51,6 @@ export class Map20Component implements OnInit {
     this.audioPas1.play();
   }
 
-  goToFight() {
-    this.globalService.isInCombat = true;
-    this.audio20.pause();
-  }
-
-  goToDialog() {
-    this.globalService.isInDialog = true;
-  }
-
   openWanted() {
     this.audioPapier.play();
     alert("Vous lisez une affiche de recherche :  '500 livres sterling pour la tête de la bête.' ")
