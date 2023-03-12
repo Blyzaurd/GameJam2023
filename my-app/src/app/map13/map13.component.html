@@ -2,6 +2,6 @@
     <p>(1,3)</p>
     <button class="gauche" (click)="goToMap03()" [disabled]="globalService.isCombatBeast">Gauche</button>
     <button class="droite" (click)="goToMap23()" [disabled]="globalService.isCombatBeast">Droite</button>
-    
-    <button class="boss" ></button>
+
+    <button class="boss" (click)="combatBoss()"></button>
   </div>

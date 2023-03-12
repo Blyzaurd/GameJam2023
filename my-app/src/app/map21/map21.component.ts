@@ -60,4 +60,10 @@ export class Map21Component implements OnInit {
     this.audioPas1.play();
   }
 
+  combatChien() {
+    this.globalService.currentEnemy = this.globalService.minion21;
+    this.globalService.isInCombat = true;
+    this.audio21.pause();
+  }
+
 }

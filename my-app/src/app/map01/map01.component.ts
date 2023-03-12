@@ -48,4 +48,9 @@ export class Map01Component implements OnInit {
     this.audioPas1.play();
     this.audioPas2.play();
   }
+
+  combatFrangine() {
+    this.globalService.currentEnemy = this.globalService.hunter2;
+    this.globalService.isInDialog = true;
+  }
 }

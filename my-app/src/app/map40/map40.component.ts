@@ -31,5 +31,9 @@ export class Map40Component implements OnInit {
     this.audioPas1.play();
   }
 
+  combatFrangin() {
+    this.globalService.currentEnemy = this.globalService.hunter1;
+    this.globalService.isInDialog = true;
+  }
 
 }

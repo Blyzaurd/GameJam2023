@@ -65,4 +65,9 @@ export class Map20Component implements OnInit {
     alert("Vous lisez une affiche de recherche :  '500 livres sterling pour la tête de la bête.' ")
     this.globalService.isWantedPageRead = true;
   }
+
+  getHax() {
+    this.globalService.isAxePickedUp = true;
+    alert("Vous venez de récupérer une hache!")
+  }
 }
