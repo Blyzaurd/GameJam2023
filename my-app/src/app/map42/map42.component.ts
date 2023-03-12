@@ -30,7 +30,7 @@ export class Map42Component implements OnInit {
   }
 
   openJournal() {
-    alert("Le porcin infernal à encore frapper la nuit dernière.  Il a emporter 4 victimes dans sa furreur, dont Élisabeth,la soeur d'une chasserèsse local")
+    alert("Vous trouvez le HamShire's Time : 'Le porcin infernal à encore frapper la nuit dernière.  Il a emporter 4 victimes dans sa furreur, dont Élisabeth,la soeur d'une chasserèsse local'")
     this.globalService.isSisterPageRead = true;
 
     
