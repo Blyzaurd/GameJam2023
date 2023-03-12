@@ -28,4 +28,8 @@ export class Map42Component implements OnInit {
     this.globalService.player.positionY = 3;
     this.audio42.pause();
   }
+
+  openJournal() {
+    
+  }
 }
