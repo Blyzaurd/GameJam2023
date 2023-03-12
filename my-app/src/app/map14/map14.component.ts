@@ -28,9 +28,5 @@ export class Map14Component implements OnInit {
     this.globalService.player.positionY = 4;
     this.audio14.pause();
   }
-  goToMap13() {
-    this.globalService.player.positionX = 1;
-    this.globalService.player.positionY = 3;
-    this.audio14.pause();
-  }
+  
 }
