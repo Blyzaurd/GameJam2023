@@ -54,7 +54,7 @@ export class CombatComponent implements OnInit {
       this._globalService.isInCombat = false;
       this.audioCombatChasseur.pause();
       this.audioCombatChasseresse.pause();
-      if(this.currentEnemy.id == 2) {
+      if(this.currentEnemy.id == 1) {
         this._globalService.isGunPickedUp = true;
       }
     }

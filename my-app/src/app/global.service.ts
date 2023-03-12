@@ -26,7 +26,7 @@ export class GlobalService {
     //Hunters
     hunter1 : Enemy = {
         id : 1,
-        name : 'Jambon',
+        name : 'Traitor',
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
@@ -37,7 +37,7 @@ export class GlobalService {
 
     hunter2 : Enemy = {
         id : 2,
-        name : 'Jambon',
+        name : 'Friendly',
         currentHealth : 100,
         maxHealth : 100,
         damage : 10,
@@ -76,6 +76,9 @@ export class GlobalService {
         dialogImageUrl : '',
         combatImageSangUrl : '/assets/MonstreSANGOVER.png'
     }
+
+
+    // 
 
     isInDialog : boolean = false;
 
