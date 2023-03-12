@@ -28,7 +28,7 @@ export class GlobalService {
     //Hunters
     hunter1 : Enemy = {
         id : 1,
-        name : 'Jhon',
+        name : 'Jon',
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
@@ -61,7 +61,7 @@ export class GlobalService {
     //Weapons
     empty : Weapon = {
         name : 'rien',
-        damage : 5
+        damage : 10
     }
     axe : Weapon = {
         name : 'une hache',
