@@ -89,7 +89,7 @@ export class GlobalService {
         damage : 10,
         combatImageUrl : '/assets/Chien.png',
         dialogImageUrl : '',
-        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+        combatImageSangUrl : ''
     }
 
 
@@ -102,7 +102,7 @@ export class GlobalService {
         damage : 10,
         combatImageUrl : '/assets/Chien.png',
         dialogImageUrl : '',
-        combatImageSangUrl : '/assets/MonstreSANGOVER.png'
+        combatImageSangUrl : ''
     }
 
     isInDialog : boolean = false;
