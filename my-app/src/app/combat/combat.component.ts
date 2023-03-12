@@ -63,6 +63,8 @@ export class CombatComponent implements OnInit {
       }
       if(this.currentEnemy.id == 3) {
         this._globalService.isCombatBeast = false;
+        this._globalService.player.positionX = 700;
+        this._globalService.player.positionY = 700;
       }
       if(this.currentEnemy.id == 4) {
         this._globalService.isCombatMinion21 = false;

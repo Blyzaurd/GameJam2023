@@ -35,6 +35,7 @@ import { Map40Component } from './map40/map40.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { IntroComponent } from './intro/intro.component';
 import { GameoverComponent } from './gameover/gameover.component';
+import { VictoireComponent } from './victoire/victoire.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { GameoverComponent } from './gameover/gameover.component';
     CombatComponent,
     DialogComponent,
     IntroComponent,
-    GameoverComponent
+    GameoverComponent,
+    VictoireComponent
   ],
   imports: [
     BrowserModule,
