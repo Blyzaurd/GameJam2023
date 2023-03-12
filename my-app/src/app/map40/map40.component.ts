@@ -34,6 +34,7 @@ export class Map40Component implements OnInit {
   combatFrangin() {
     this.globalService.currentEnemy = this.globalService.hunter1;
     this.globalService.isInDialog = true;
+    this.audio40.pause();
   }
 
 }

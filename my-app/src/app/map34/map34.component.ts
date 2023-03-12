@@ -40,7 +40,7 @@ export class Map34Component implements OnInit {
   }
 
   combatChien() {
-    this.globalService.currentEnemy = this.globalService.minion21;
+    this.globalService.currentEnemy = this.globalService.minion34;
     this.globalService.isInCombat = true;
     this.audio34.pause();
   }

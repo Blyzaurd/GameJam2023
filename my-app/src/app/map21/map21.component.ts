@@ -28,9 +28,9 @@ export class Map21Component implements OnInit {
     this.audio21.play();
   }
 
-  goToMap13() {
-    this.globalService.player.positionX = 1;
-    this.globalService.player.positionY = 3;
+  goToMap31() {
+    this.globalService.player.positionX = 3;
+    this.globalService.player.positionY = 1;
     this.audio21.pause();
     this.audioPas1.play();
     this.audioPas2.play();
