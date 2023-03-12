@@ -11,10 +11,19 @@ export class Map42Component implements OnInit {
 
   audio42 = new Audio();
   audioThunder = new Audio();
+  audioPapier = new Audio();
+  audioPas1 = new Audio();
+  audioPas2 = new Audio();
 
   ngOnInit(): void {
     this.audio42.src = "../assets/Music-Exploration2.wav";
     this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioPapier.src = "../assets/SFX_Papier1.wav";
+    this.audioPas1.src = "../assets/SFX_FootstepsDirt1.wav";
+    this.audioPas2.src = "../assets/SFX_FootstepsLeaves2.wav";
+    this.audioPas1.load();
+    this.audioPas2.load();
+    this.audioPapier.load();
     this.audioThunder.load();
     this.audioThunder.play();
     this.audio42.load();
@@ -25,15 +34,18 @@ export class Map42Component implements OnInit {
     this.globalService.player.positionX = 4;
     this.globalService.player.positionY = 1;
     this.audio42.pause();
+    this.audioPas2.play();
   }
 
   goToMap43() {
     this.globalService.player.positionX = 4;
     this.globalService.player.positionY = 3;
     this.audio42.pause();
+    this.audioPas1.play();
   }
 
   openJournal() {
+    this.audioPapier.play();
     alert("Vous trouvez le HamShire's Time : 'Le porcin infernal à encore frapper la nuit dernière.  Il a emporter 4 victimes dans sa furreur, dont Élisabeth,la soeur d'une chasserèsse local'")
     this.globalService.isSisterPageRead = true;
 

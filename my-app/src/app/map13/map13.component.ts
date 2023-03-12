@@ -10,9 +10,15 @@ export class Map13Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audioThunder = new Audio();
+  audioPas1 = new Audio();
+  audioPas2 = new Audio();
 
   ngOnInit(): void {
     this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioPas1.src = "../assets/SFX_FootstepsDirt1.wav";
+    this.audioPas2.src = "../assets/SFX_FootstepsLeaves2.wav";
+    this.audioPas1.load();
+    this.audioPas2.load();
     this.audioThunder.load();
     this.audioThunder.play();
   }
@@ -20,18 +26,22 @@ export class Map13Component implements OnInit {
   goToMap12() {
     this.globalService.player.positionX = 1;
     this.globalService.player.positionY = 2;
+    this.audioPas1.play();
   }
 
   goToMap14() {
     this.globalService.player.positionX = 1;
     this.globalService.player.positionY = 4;
+    this.audioPas1.play();
   }
   goToMap03() {
     this.globalService.player.positionX = 0;
     this.globalService.player.positionY = 3;
+    this.audioPas2.play();
   }
   goToMap23() {
     this.globalService.player.positionX = 2;
     this.globalService.player.positionY = 3;
+    this.audioPas2.play();
   }
 }

@@ -10,9 +10,15 @@ export class Map40Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audio40 = new Audio();
+  audioPas1 = new Audio();
+  audioPas2 = new Audio();
 
   ngOnInit(): void {
     this.audio40.src = "../assets/Music-Exploration2.wav";
+    this.audioPas1.src = "../assets/SFX_FootstepsDirt1.wav";
+    this.audioPas2.src = "../assets/SFX_FootstepsLeaves2.wav";
+    this.audioPas1.load();
+    this.audioPas2.load();
     this.audio40.load();
     this.audio40.play();
   }
@@ -21,6 +27,7 @@ export class Map40Component implements OnInit {
     this.globalService.player.positionX = 4;
     this.globalService.player.positionY = 1;
     this.audio40.pause();
+    this.audioPas2.play();
   }
 
 
