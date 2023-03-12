@@ -82,7 +82,7 @@ export class GlobalService {
     greatBeast : Enemy = {
         id : 3,
         name : 'Great Beast of HamShire',
-        currentHealth : 100,
+        currentHealth : 400,
         maxHealth : 400,
         damage : 20,
         combatImageUrl : '/assets/Monstre.png',
