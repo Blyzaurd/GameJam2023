@@ -28,6 +28,7 @@ export class Map40Component implements OnInit {
     this.globalService.player.positionY = 1;
     this.audio40.pause();
     this.audioPas2.play();
+    this.audioPas1.play();
   }
 
 
