@@ -63,7 +63,7 @@ export class GlobalService {
         currentHealth : 100,
         maxHealth : 100,
         damage : 100,
-        combatImageUrl : '',
+        combatImageUrl : '/assets/Monstre.png',
         dialogImageUrl : ''
     }
 

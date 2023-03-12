@@ -1,12 +1,12 @@
 <div class="background">
   <div class="enemy">
 
-    
+
     <div class="vie_enemy">
       <p>PV : {{currentEnemy.currentHealth}}/{{currentEnemy.maxHealth}}</p>
     </div>
     <img src={{currentEnemy.combatImageUrl}} *ngIf="playerAttacking === false">
-    <img src="https://media.istockphoto.com/id/519845857/vector/blood-drop-with-thumbs-up.jpg?s=612x612&w=0&k=20&c=Eg_mmTAE9cSZbAih-8sdNuCEbCnzsmPJRcKCq0UAX-A=" *ngIf="playerAttacking === true">
+    <img src="/assets/Tachedesang.png" *ngIf="playerAttacking === true">
     <div class="vie_player">
       <p class="sans-rouge" *ngIf="enemyAttacking === false">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
       <p class="rouge" *ngIf="enemyAttacking === true">PV : {{player.currentHealth}}/{{player.maxHealth}}</p>
@@ -18,7 +18,7 @@
     <button (click)="defense()" [disabled]="playerTurnCheck()">Défendre</button>
     <button (click)="defense()" [disabled]="playerTurnCheck()">Changer d'arme</button>
     </div>
-   
+
 
   </div>
  <div class="dialogue" *ngIf="this._globalService.superAttack"> {{currentEnemy.name}} : I'm chargin my lazer !</div>
