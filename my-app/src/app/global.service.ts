@@ -120,6 +120,8 @@ export class GlobalService {
 
 
     //Dialog
+    isReadingWanted : boolean = false;
+    isReadingSister : boolean = false;
     isWantedPageRead : boolean = false;
     isSisterPageRead : boolean = false;
     isTraitorHelping : boolean = false;
