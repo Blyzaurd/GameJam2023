@@ -10,7 +10,7 @@ export class GlobalService {
 
     constructor() {}
 
-    isCombatBeast = true; 
+    isCombatBeast = true;
     isCombatFriendly = true;
     isCombatTraitor = true;
 
@@ -78,7 +78,7 @@ export class GlobalService {
     isInDialog : boolean = false;
 
     /// Battle
-    currentEnemy : Enemy = this.hunter1;
+    currentEnemy : Enemy = this.hunter2;
     selectedWeapon : Weapon = this.axe;
     isInCombat: boolean = false;
     isPlayerTurn: boolean = true;

@@ -28,6 +28,7 @@ export class Map41Component implements OnInit {
     this.globalService.player.positionY = 2;
     this.audio41.pause();
     this.audioPas1.play();
+    this.audioPas2.play();
   }
 
   goToMap40() {
@@ -35,6 +36,7 @@ export class Map41Component implements OnInit {
     this.globalService.player.positionY = 0;
     this.audio41.pause();
     this.audioPas2.play();
+    this.audioPas1.play();
   }
 
 
