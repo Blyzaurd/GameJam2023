@@ -28,7 +28,7 @@ export class GlobalService {
     //Hunters
     hunter1 : Enemy = {
         id : 1,
-        name : 'Jon',
+        name : 'Jhon',
         currentHealth : 200,
         maxHealth : 200,
         damage : 10,
@@ -52,7 +52,7 @@ export class GlobalService {
     player : Player = {
         currentHealth : 100,
         maxHealth : 100,
-        damage : 10,
+        damage : 9,
         positionX : 300,
         positionY : 300,
         mort : false
@@ -65,7 +65,7 @@ export class GlobalService {
     }
     axe : Weapon = {
         name : 'une hache',
-        damage : 20
+        damage : 25
     }
     gun : Weapon = {
         name : 'le fusil',
@@ -83,7 +83,7 @@ export class GlobalService {
         id : 3,
         name : 'Great Beast of HamShire',
         currentHealth : 100,
-        maxHealth : 100,
+        maxHealth : 400,
         damage : 20,
         combatImageUrl : '/assets/Monstre.png',
         dialogImageUrl : '',
