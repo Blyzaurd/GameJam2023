@@ -13,6 +13,8 @@ export class GlobalService {
     isCombatBeast = true;
     isCombatFriendly = true;
     isCombatTraitor = true;
+    isCombatMinion21 = true;
+    isCombatMinion34 = true;
 
 
     isGunPickedUp = false;
