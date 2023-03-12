@@ -59,13 +59,24 @@ export class GlobalService {
     }
 
     //Weapons
+    empty : Weapon = {
+        name : 'rien',
+        damage : 5
+    }
     axe : Weapon = {
+        name : 'une hache',
         damage : 20
     }
-
     gun : Weapon = {
+        name : 'le fusil',
         damage : 50
     }
+
+    weaponList : Weapon[] = [
+        this.empty,
+        this.axe,
+        this.gun
+    ]
 
     // Great Beast
     greatBeast : Enemy = {
