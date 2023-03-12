@@ -10,9 +10,13 @@ export class Map44Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audio44 = new Audio();
+  audioThunder = new Audio();
 
   ngOnInit(): void {
     this.audio44.src = "../assets/Music-Exploration2.wav";
+    this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioThunder.load();
+    this.audioThunder.play();
     this.audio44.load();
     this.audio44.play();
   }

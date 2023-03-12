@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -6,8 +6,16 @@ import { GlobalService } from '../global.service';
   templateUrl: './map13.component.html',
   styleUrls: ['./map13.component.css']
 })
-export class Map13Component {
+export class Map13Component implements OnInit {
   constructor(private globalService: GlobalService){}
+
+  audioThunder = new Audio();
+
+  ngOnInit(): void {
+    this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioThunder.load();
+    this.audioThunder.play();
+  }
 
   goToMap12() {
     this.globalService.player.positionX = 1;

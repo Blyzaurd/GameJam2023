@@ -10,9 +10,13 @@ export class Map42Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audio42 = new Audio();
+  audioThunder = new Audio();
 
   ngOnInit(): void {
     this.audio42.src = "../assets/Music-Exploration2.wav";
+    this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioThunder.load();
+    this.audioThunder.play();
     this.audio42.load();
     this.audio42.play();
   }
@@ -33,6 +37,6 @@ export class Map42Component implements OnInit {
     alert("Vous trouvez le HamShire's Time : 'Le porcin infernal à encore frapper la nuit dernière.  Il a emporter 4 victimes dans sa furreur, dont Élisabeth,la soeur d'une chasserèsse local'")
     this.globalService.isSisterPageRead = true;
 
-    
+
   }
 }

@@ -42,6 +42,7 @@ export class CombatComponent implements OnInit {
   }
 
   attackEnemy() {
+    this.enemyAttacking = false;
     if(this.playerTurn == true) {
       this.currentEnemy.currentHealth -= this.player.damage;
     }
@@ -54,20 +55,33 @@ export class CombatComponent implements OnInit {
         this._globalService.isGunPickedUp = true;
       }
     }
+    this.playerAttacking = true;
 
     this.playerTurn = false;
+    this.timeoutDegat();
     this.timeOutCombat();
+  }
+
+  timeoutDegat() {
+    setTimeout(() => {
+      this.changeAttack();
+    }, 250)
+  }
+
+  changeAttack() {
+    this.playerAttacking = false;
   }
 
   timeOutCombat() {
     if(this.playerTurn == false) {
       setTimeout(() => {
         this.enemyAttack();
-      }, 1500);
+      }, 750);
     }
   }
 
   enemyAttack() {
+    this.playerAttacking = false;
     if(this.playerTurn == false) {
       if(this._globalService.isPlayerDefending == true) {
         this.player.currentHealth -= (this.currentEnemy.damage / 2)
@@ -76,6 +90,8 @@ export class CombatComponent implements OnInit {
         this.player.currentHealth -= this.currentEnemy.damage
       }
     }
+
+    this.enemyAttacking = true;
 
     if(this.player.currentHealth <= 0) {
       this.player.mort = true;
@@ -89,6 +105,14 @@ export class CombatComponent implements OnInit {
     }
 
     this.playerTurn = true;
+
+    setTimeout(() => {
+      this.changeEnemyAttack();
+    }, 750)
+  }
+
+  changeEnemyAttack() {
+    this.enemyAttacking = false;
   }
 
   defense() {

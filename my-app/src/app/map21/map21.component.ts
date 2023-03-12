@@ -11,9 +11,13 @@ export class Map21Component implements OnInit {
   constructor(private globalService: GlobalService){}
 
   audio21 = new Audio();
+  audioThunder = new Audio();
 
   ngOnInit(): void {
     this.audio21.src = "../assets/Music-Exploration2.wav";
+    this.audioThunder.src = "../assets/SFX_Thunder2.wav";
+    this.audioThunder.load();
+    this.audioThunder.play();
     this.audio21.load();
     this.audio21.play();
   }
